@@ -1,0 +1,3 @@
+module.exports=[21560,a=>{"use strict";var b=a.i(30002);function c({children:a}){return(0,b.jsx)(b.Fragment,{children:a})}a.s(["default",()=>c,"metadata",0,{title:"Nominees | ClawHack — The 2026 Claw Summit and Clawards",description:"Official Claward nominees, scores, rankings, and awards for ClawHack Demo Day at ETHDenver, March 14, 2026."}])}];
+
+//# sourceMappingURL=nebius-site_src_app_nominees_layout_tsx_77916b9f._.js.map

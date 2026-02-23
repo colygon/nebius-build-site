@@ -1,0 +1,3 @@
+module.exports=[26402,a=>{"use strict";var b=a.i(30002);function c({children:a}){return(0,b.jsx)(b.Fragment,{children:a})}a.s(["default",()=>c,"metadata",0,{title:"Become a Sponsor | ClawHack — The 2026 Claw Summit and Clawards",description:"Sponsor ClawHack at ETHDenver. Get your brand in front of the top AI agent builders in San Francisco, March 14, 2026."}])}];
+
+//# sourceMappingURL=nebius-site_src_app_sponsor_layout_tsx_46d3df4e._.js.map

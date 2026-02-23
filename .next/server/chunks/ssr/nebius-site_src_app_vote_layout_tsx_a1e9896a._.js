@@ -1,0 +1,3 @@
+module.exports=[87746,a=>{"use strict";var b=a.i(30002);function c({children:a}){return(0,b.jsx)(b.Fragment,{children:a})}a.s(["default",()=>c,"metadata",0,{title:"Community Vote | ClawHack — The 2026 Claw Summit and Clawards",description:"Vote for your favorite nominations and speakers at ClawHack. Help the community decide who demos on stage at ETHDenver, March 14, 2026."}])}];
+
+//# sourceMappingURL=nebius-site_src_app_vote_layout_tsx_a1e9896a._.js.map

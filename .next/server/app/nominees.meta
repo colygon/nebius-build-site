@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/nominees/layout,_N_T_/nominees/page,_N_T_/nominees"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/nominees/__PAGE__",
+    "/nominees",
+    "/_index",
+    "/_head"
+  ]
+}
