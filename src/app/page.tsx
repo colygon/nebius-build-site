@@ -994,11 +994,7 @@ export default function NebiusBuildPage() {
       {/* Livestream */}
       <section id="livestream" className="py-24 px-6 border-t border-white/10">
         <div className="max-w-5xl mx-auto">
-          <div className="flex items-center gap-3 mb-6">
-            <span className="relative flex h-3 w-3">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#c8ff00] opacity-75" />
-              <span className="relative inline-flex rounded-full h-3 w-3 bg-[#c8ff00]" />
-            </span>
+          <div className="mb-6">
             <Image src="/logos/videos.png" alt="Videos" width={600} height={150} className="h-32 md:h-40 w-auto" />
           </div>
           <div className="flex gap-2 mb-6 flex-wrap">
