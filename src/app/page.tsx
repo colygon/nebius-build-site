@@ -321,7 +321,7 @@ export default function NebiusBuildPage() {
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
     const id = splashIdRef.current++;
-    const scale = (0.5 + Math.random() * 0.8) * 3;
+    const scale = (0.5 + Math.random() * 0.8) * 2.1;
     const rotation = Math.random() * 360;
     const variant = Math.floor(Math.random() * 3);
 
@@ -643,44 +643,88 @@ export default function NebiusBuildPage() {
             >
               {s.variant === 0 && (
                 <g fill="#c8ff00" fillOpacity="0.4">
-                  <circle cx="50" cy="50" r="18" />
-                  <ellipse cx="25" cy="35" rx="8" ry="5" />
-                  <ellipse cx="75" cy="30" rx="6" ry="4" />
-                  <ellipse cx="70" cy="70" rx="7" ry="5" />
-                  <ellipse cx="30" cy="72" rx="5" ry="4" />
-                  <circle cx="15" cy="50" r="3" />
-                  <circle cx="85" cy="50" r="3" />
-                  <circle cx="50" cy="15" r="3" />
-                  <circle cx="50" cy="85" r="2" />
-                  <ellipse cx="40" cy="25" rx="4" ry="3" />
-                  <ellipse cx="62" cy="78" rx="4" ry="3" />
+                  <circle cx="50" cy="50" r="4" />
+                  <circle cx="42" cy="44" r="3" />
+                  <circle cx="58" cy="46" r="3.5" />
+                  <circle cx="46" cy="56" r="3" />
+                  <circle cx="55" cy="54" r="2.5" />
+                  <circle cx="35" cy="38" r="2.5" />
+                  <circle cx="65" cy="36" r="2" />
+                  <circle cx="68" cy="58" r="2.5" />
+                  <circle cx="32" cy="60" r="2" />
+                  <circle cx="25" cy="45" r="2" />
+                  <circle cx="75" cy="48" r="1.5" />
+                  <circle cx="50" cy="32" r="2" />
+                  <circle cx="50" cy="68" r="2" />
+                  <circle cx="20" cy="52" r="1.5" />
+                  <circle cx="80" cy="42" r="1.5" />
+                  <circle cx="38" cy="28" r="1.5" />
+                  <circle cx="62" cy="72" r="1.5" />
+                  <circle cx="28" cy="68" r="1" />
+                  <circle cx="72" cy="28" r="1" />
+                  <circle cx="15" cy="40" r="1" />
+                  <circle cx="85" cy="55" r="1" />
+                  <circle cx="45" cy="22" r="1" />
+                  <circle cx="55" cy="78" r="1" />
+                  <circle cx="12" cy="58" r="0.8" />
+                  <circle cx="88" cy="38" r="0.8" />
                 </g>
               )}
               {s.variant === 1 && (
                 <g fill="#c8ff00" fillOpacity="0.35">
-                  <path d="M50 30 Q60 50 50 70 Q40 50 50 30Z" />
-                  <circle cx="50" cy="50" r="15" />
-                  <circle cx="30" cy="40" r="5" />
-                  <circle cx="70" cy="40" r="4" />
-                  <circle cx="35" cy="65" r="4" />
-                  <circle cx="68" cy="62" r="5" />
-                  <circle cx="20" cy="55" r="2" />
-                  <circle cx="80" cy="48" r="2" />
-                  <circle cx="45" cy="20" r="3" />
-                  <circle cx="58" cy="82" r="2" />
+                  <circle cx="50" cy="50" r="3.5" />
+                  <circle cx="44" cy="42" r="3" />
+                  <circle cx="56" cy="48" r="2.5" />
+                  <circle cx="48" cy="58" r="3" />
+                  <circle cx="38" cy="50" r="2.5" />
+                  <circle cx="62" cy="44" r="2" />
+                  <circle cx="60" cy="60" r="2.5" />
+                  <circle cx="34" cy="36" r="2" />
+                  <circle cx="66" cy="34" r="1.5" />
+                  <circle cx="30" cy="55" r="1.5" />
+                  <circle cx="70" cy="56" r="2" />
+                  <circle cx="26" cy="42" r="1.5" />
+                  <circle cx="74" cy="50" r="1.5" />
+                  <circle cx="42" cy="30" r="1.5" />
+                  <circle cx="58" cy="70" r="1.5" />
+                  <circle cx="22" cy="48" r="1" />
+                  <circle cx="78" cy="40" r="1" />
+                  <circle cx="50" cy="24" r="1" />
+                  <circle cx="50" cy="76" r="1" />
+                  <circle cx="18" cy="55" r="0.8" />
+                  <circle cx="82" cy="60" r="0.8" />
+                  <circle cx="36" cy="72" r="1" />
+                  <circle cx="64" cy="26" r="1" />
+                  <circle cx="15" cy="35" r="0.8" />
                 </g>
               )}
               {s.variant === 2 && (
                 <g fill="#c8ff00" fillOpacity="0.3">
-                  <ellipse cx="50" cy="50" rx="20" ry="16" />
-                  <ellipse cx="28" cy="42" rx="10" ry="6" transform="rotate(-20 28 42)" />
-                  <ellipse cx="72" cy="45" rx="9" ry="5" transform="rotate(15 72 45)" />
-                  <ellipse cx="40" cy="72" rx="8" ry="4" transform="rotate(10 40 72)" />
-                  <ellipse cx="65" cy="30" rx="7" ry="4" transform="rotate(-10 65 30)" />
-                  <circle cx="18" cy="55" r="3" />
-                  <circle cx="82" cy="55" r="3" />
-                  <circle cx="50" cy="18" r="2" />
-                  <circle cx="42" cy="85" r="2" />
+                  <circle cx="50" cy="50" r="3" />
+                  <circle cx="46" cy="44" r="2.5" />
+                  <circle cx="54" cy="56" r="2.5" />
+                  <circle cx="40" cy="52" r="3" />
+                  <circle cx="60" cy="48" r="2" />
+                  <circle cx="36" cy="40" r="2" />
+                  <circle cx="64" cy="60" r="2" />
+                  <circle cx="52" cy="36" r="2" />
+                  <circle cx="48" cy="64" r="2" />
+                  <circle cx="30" cy="46" r="1.5" />
+                  <circle cx="70" cy="54" r="1.5" />
+                  <circle cx="58" cy="32" r="1.5" />
+                  <circle cx="42" cy="68" r="1.5" />
+                  <circle cx="24" cy="52" r="1.5" />
+                  <circle cx="76" cy="44" r="1" />
+                  <circle cx="34" cy="30" r="1" />
+                  <circle cx="66" cy="70" r="1" />
+                  <circle cx="20" cy="38" r="1" />
+                  <circle cx="80" cy="58" r="1" />
+                  <circle cx="44" cy="24" r="1" />
+                  <circle cx="56" cy="76" r="1" />
+                  <circle cx="14" cy="48" r="0.8" />
+                  <circle cx="86" cy="50" r="0.8" />
+                  <circle cx="28" cy="66" r="0.8" />
+                  <circle cx="72" cy="32" r="0.8" />
                 </g>
               )}
             </svg>
@@ -1476,7 +1520,7 @@ export default function NebiusBuildPage() {
         <div className="relative z-10 max-w-4xl mx-auto text-center">
           <Image src="/logos/buildwithus.png" alt="Build With Us" width={800} height={200} className="h-40 md:h-56 w-auto mb-6 mx-auto" />
           <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white/60 mb-12 max-w-4xl md:max-w-5xl mx-auto">
-            The AI revolution is here. Demo your agent on the biggest stage in San Francisco.
+            The AI revolution is here. Demo your project on the biggest stage in San Francisco.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button
