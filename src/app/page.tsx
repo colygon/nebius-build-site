@@ -803,7 +803,7 @@ export default function NebiusBuildPage() {
             Inference & Robotics Hackathon
           </p>
 
-<div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+<div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
             <button
               type="button"
               onClick={openRegister}
@@ -811,6 +811,25 @@ export default function NebiusBuildPage() {
             >
               Register to Hack
             </button>
+          </div>
+
+          <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-16 text-center mb-8">
+            <div>
+              <div className="text-4xl md:text-5xl font-bold">150</div>
+              <div className="text-sm text-white/50 uppercase tracking-wider mt-1">Hackers</div>
+            </div>
+            <div className="hidden md:block w-px h-12 bg-white/20" />
+            <div className="md:hidden w-16 h-px bg-white/20" />
+            <div>
+              <div className="text-4xl md:text-5xl font-bold">$25,000</div>
+              <div className="text-sm text-white/50 uppercase tracking-wider mt-1">In Cash Prizes</div>
+            </div>
+            <div className="hidden md:block w-px h-12 bg-white/20" />
+            <div className="md:hidden w-16 h-px bg-white/20" />
+            <div>
+              <div className="text-4xl md:text-5xl font-bold">50</div>
+              <div className="text-sm text-white/50 uppercase tracking-wider mt-1">Robots</div>
+            </div>
           </div>
           </div>
 
@@ -853,24 +872,6 @@ export default function NebiusBuildPage() {
             </div>
           </div>
 
-          <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-16 text-center pb-12">
-            <div>
-              <div className="text-4xl md:text-5xl font-bold">150</div>
-              <div className="text-sm text-white/50 uppercase tracking-wider mt-1">Hackers</div>
-            </div>
-            <div className="hidden md:block w-px h-12 bg-white/20" />
-            <div className="md:hidden w-16 h-px bg-white/20" />
-            <div>
-              <div className="text-4xl md:text-5xl font-bold">$25,000</div>
-              <div className="text-sm text-white/50 uppercase tracking-wider mt-1">In Cash Prizes</div>
-            </div>
-            <div className="hidden md:block w-px h-12 bg-white/20" />
-            <div className="md:hidden w-16 h-px bg-white/20" />
-            <div>
-              <div className="text-4xl md:text-5xl font-bold">13</div>
-              <div className="text-sm text-white/50 uppercase tracking-wider mt-1">Mentors</div>
-            </div>
-          </div>
         </div>
 
         {/* Scroll indicator */}
