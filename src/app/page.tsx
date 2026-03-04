@@ -794,7 +794,7 @@ export default function NebiusBuildPage() {
       {/* Venue */}
       <section id="venue" className="py-24 px-6 border-t border-white/10 bg-white/[0.02]">
         <div className="max-w-5xl mx-auto">
-          <Image src="/logos/location.png" alt="Location" width={600} height={150} className="h-16 md:h-20 w-auto mb-4" />
+          <Image src="/logos/location.png" alt="Location" width={600} height={150} className="h-32 md:h-40 w-auto mb-4" />
           <p className="text-lg text-white/60 mb-2">SHACK15 — San Francisco, CA</p>
           <div className="grid md:grid-cols-2 gap-4 items-start mb-8">
             <a
@@ -845,7 +845,7 @@ export default function NebiusBuildPage() {
       {/* Why */}
       <section id="why" className="py-24 px-6 border-t border-white/10 bg-white/[0.02]">
         <div className="max-w-6xl mx-auto">
-          <Image src="/logos/prizes.png" alt="Prizes" width={600} height={150} className="h-16 md:h-20 w-auto mb-4" />
+          <Image src="/logos/prizes.png" alt="Prizes" width={600} height={150} className="h-32 md:h-40 w-auto mb-4" />
           <p className="text-white/60 mb-10 text-lg">Built for builders. Designed for standout submissions.</p>
 
           <div className="grid grid-cols-1 gap-8">
@@ -905,7 +905,7 @@ export default function NebiusBuildPage() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#c8ff00] opacity-75" />
               <span className="relative inline-flex rounded-full h-3 w-3 bg-[#c8ff00]" />
             </span>
-            <Image src="/logos/videos.png" alt="Videos" width={600} height={150} className="h-16 md:h-20 w-auto" />
+            <Image src="/logos/videos.png" alt="Videos" width={600} height={150} className="h-32 md:h-40 w-auto" />
           </div>
           <div className="flex gap-2 mb-6 flex-wrap">
             {livestreamTabs.map((stream) => (
@@ -936,7 +936,7 @@ export default function NebiusBuildPage() {
       {/* Schedule */}
       <section id="schedule" className="py-24 px-6 border-t border-white/10 bg-white/[0.02]">
         <div className="max-w-6xl mx-auto">
-          <Image src="/logos/schedule.png" alt="Schedule" width={600} height={150} className="h-16 md:h-20 w-auto mb-4" />
+          <Image src="/logos/schedule.png" alt="Schedule" width={600} height={150} className="h-32 md:h-40 w-auto mb-4" />
           <p className="text-white/50 mb-10 text-lg">One day. Full event flow.</p>
 
           <div>
@@ -972,7 +972,7 @@ export default function NebiusBuildPage() {
       {/* Sponsor */}
       <section id="sponsors" className="py-24 px-6 border-t border-white/10 bg-white/[0.02]">
         <div className="max-w-4xl mx-auto text-center">
-          <Image src="/logos/partners.png" alt="Partners" width={600} height={150} className="h-16 md:h-20 w-auto mb-4 mx-auto" />
+          <Image src="/logos/partners.png" alt="Partners" width={600} height={150} className="h-32 md:h-40 w-auto mb-4 mx-auto" />
           <p className="text-white/50 mb-12 text-lg max-w-2xl mx-auto">
             Nebius.Build is free and community-curated. Sponsors make it possible.
           </p>
@@ -1102,7 +1102,7 @@ export default function NebiusBuildPage() {
       {/* Library */}
       <section id="library" className="py-24 px-6 border-t border-white/10 bg-white/[0.02]">
         <div className="max-w-5xl mx-auto">
-          <Image src="/logos/guides.png" alt="Guides" width={600} height={150} className="h-16 md:h-20 w-auto mb-4" />
+          <Image src="/logos/guides.png" alt="Guides" width={600} height={150} className="h-32 md:h-40 w-auto mb-4" />
           <p className="text-white/50 mb-10 text-lg">A compact index of APIs and docs we keep coming back to while building.</p>
           <div className="grid md:grid-cols-2 gap-6">
             {libraryLinks.map((item) => (
@@ -1473,7 +1473,7 @@ export default function NebiusBuildPage() {
       <section className="py-32 px-6 border-t border-white/10 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-t from-[#1a2e1a]/20 to-transparent" />
         <div className="relative z-10 max-w-4xl mx-auto text-center">
-          <Image src="/logos/buildwithus.png" alt="Build With Us" width={800} height={200} className="h-20 md:h-28 w-auto mb-6 mx-auto" />
+          <Image src="/logos/buildwithus.png" alt="Build With Us" width={800} height={200} className="h-40 md:h-56 w-auto mb-6 mx-auto" />
           <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white/60 mb-12 max-w-4xl md:max-w-5xl mx-auto">
             The AI revolution is here. Demo your agent on the biggest stage in San Francisco.
           </p>
