@@ -905,7 +905,7 @@ export default function NebiusBuildPage() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#c8ff00] opacity-75" />
               <span className="relative inline-flex rounded-full h-3 w-3 bg-[#c8ff00]" />
             </span>
-            <h2 className="text-4xl md:text-6xl font-bold tracking-tight">Watch</h2>
+            <Image src="/logos/videos.png" alt="Videos" width={600} height={150} className="h-16 md:h-20 w-auto" />
           </div>
           <div className="flex gap-2 mb-6 flex-wrap">
             {livestreamTabs.map((stream) => (
@@ -1102,7 +1102,7 @@ export default function NebiusBuildPage() {
       {/* Library */}
       <section id="library" className="py-24 px-6 border-t border-white/10 bg-white/[0.02]">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-4xl md:text-6xl font-bold mb-4 tracking-tight">How-to</h2>
+          <Image src="/logos/guides.png" alt="Guides" width={600} height={150} className="h-16 md:h-20 w-auto mb-4" />
           <p className="text-white/50 mb-10 text-lg">A compact index of APIs and docs we keep coming back to while building.</p>
           <div className="grid md:grid-cols-2 gap-6">
             {libraryLinks.map((item) => (
