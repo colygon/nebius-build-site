@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Nebius.Build | Inference & Robotics Challenges",
+  title: "Nebius.Build | Inference & Robotics Hackathon",
   description:
-    "Inference & Robotics challenges powered by Nebius. Workshops, demos, and awards. Free, open-source, community-curated. San Francisco, CA — March 15, 2026.",
+    "Inference & Robotics hackathon powered by Nebius. Workshops, demos, and awards. Free, open-source, community-curated. San Francisco, CA — March 15, 2026.",
   openGraph: {
-    title: "Nebius.Build | Inference & Robotics Challenges",
+    title: "Nebius.Build | Inference & Robotics Hackathon",
     description:
-      "Inference & Robotics challenges powered by Nebius. Build, demo, and win awards. March 15, San Francisco, CA.",
+      "Inference & Robotics hackathon powered by Nebius. Build, demo, and win awards. March 15, San Francisco, CA.",
   },
 };
 
