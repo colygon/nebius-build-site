@@ -794,7 +794,7 @@ export default function NebiusBuildPage() {
       {/* Venue */}
       <section id="venue" className="py-24 px-6 border-t border-white/10 bg-white/[0.02]">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-4xl md:text-6xl font-bold mb-4 tracking-tight">Where</h2>
+          <Image src="/logos/location.png" alt="Location" width={600} height={150} className="h-16 md:h-20 w-auto mb-4" />
           <p className="text-lg text-white/60 mb-2">SHACK15 — San Francisco, CA</p>
           <div className="grid md:grid-cols-2 gap-4 items-start mb-8">
             <a
@@ -845,7 +845,7 @@ export default function NebiusBuildPage() {
       {/* Why */}
       <section id="why" className="py-24 px-6 border-t border-white/10 bg-white/[0.02]">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-6xl font-bold mb-4 tracking-tight">Why</h2>
+          <Image src="/logos/prizes.png" alt="Prizes" width={600} height={150} className="h-16 md:h-20 w-auto mb-4" />
           <p className="text-white/60 mb-10 text-lg">Built for builders. Designed for standout submissions.</p>
 
           <div className="grid grid-cols-1 gap-8">
@@ -936,7 +936,7 @@ export default function NebiusBuildPage() {
       {/* Schedule */}
       <section id="schedule" className="py-24 px-6 border-t border-white/10 bg-white/[0.02]">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-6xl font-bold mb-4 tracking-tight">Schedule</h2>
+          <Image src="/logos/schedule.png" alt="Schedule" width={600} height={150} className="h-16 md:h-20 w-auto mb-4" />
           <p className="text-white/50 mb-10 text-lg">One day. Full event flow.</p>
 
           <div>
@@ -972,7 +972,7 @@ export default function NebiusBuildPage() {
       {/* Sponsor */}
       <section id="sponsors" className="py-24 px-6 border-t border-white/10 bg-white/[0.02]">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-6xl font-bold mb-4 tracking-tight">Sponsors</h2>
+          <Image src="/logos/partners.png" alt="Partners" width={600} height={150} className="h-16 md:h-20 w-auto mb-4 mx-auto" />
           <p className="text-white/50 mb-12 text-lg max-w-2xl mx-auto">
             Nebius.Build is free and community-curated. Sponsors make it possible.
           </p>
