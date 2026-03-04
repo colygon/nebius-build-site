@@ -29,6 +29,7 @@ const SUBMISSION_URL = "#"; // Replace with actual submission form
 
 const sponsorHosts = [
   { name: "Nebius", url: "https://nebius.com/", logo: "/logos/nebius.jpg", description: "Cloud infra + platform partnership powering the event hosting and AI workflows." },
+  { name: "Cerebral Valley", url: "https://cerebralvalley.ai", logo: "/logos/cerebralvalley.png", description: "San Francisco's premier AI community connecting builders, researchers, and founders." },
 ];
 
 const sponsors = [
