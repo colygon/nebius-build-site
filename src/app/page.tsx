@@ -320,12 +320,12 @@ export default function NebiusBuildPage() {
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
     const id = splashIdRef.current++;
-    const scale = 0.5 + Math.random() * 0.8;
+    const scale = (0.5 + Math.random() * 0.8) * 3;
     const rotation = Math.random() * 360;
     const variant = Math.floor(Math.random() * 3);
 
     setSplashes(prev => [...prev.slice(-30), { id, x, y, scale, rotation, variant }]);
-    setTimeout(() => setSplashes(prev => prev.filter(s => s.id !== id)), 2000);
+    setTimeout(() => setSplashes(prev => prev.filter(s => s.id !== id)), 8000);
   }, []);
 
   const goToTab = (tab: HomeTab) => {
@@ -630,7 +630,7 @@ export default function NebiusBuildPage() {
           {splashes.map(s => (
             <svg
               key={s.id}
-              className="absolute animate-[splashIn_0.3s_ease-out_forwards,splashFade_2s_ease-out_forwards]"
+              className="absolute animate-[splashIn_0.3s_ease-out_forwards,splashFade_8s_ease-out_forwards]"
               style={{
                 left: s.x - 30 * s.scale,
                 top: s.y - 30 * s.scale,
