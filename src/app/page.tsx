@@ -643,84 +643,132 @@ export default function NebiusBuildPage() {
             >
               {s.variant === 0 && (
                 <g fill="#c8ff00" fillOpacity="0.4">
-                  <circle cx="50" cy="50" r="4" />
-                  <circle cx="42" cy="44" r="3" />
-                  <circle cx="58" cy="46" r="3.5" />
-                  <circle cx="46" cy="56" r="3" />
-                  <circle cx="55" cy="54" r="2.5" />
-                  <circle cx="35" cy="38" r="2.5" />
-                  <circle cx="65" cy="36" r="2" />
-                  <circle cx="68" cy="58" r="2.5" />
-                  <circle cx="32" cy="60" r="2" />
-                  <circle cx="25" cy="45" r="2" />
-                  <circle cx="75" cy="48" r="1.5" />
-                  <circle cx="50" cy="32" r="2" />
-                  <circle cx="50" cy="68" r="2" />
-                  <circle cx="20" cy="52" r="1.5" />
-                  <circle cx="80" cy="42" r="1.5" />
-                  <circle cx="38" cy="28" r="1.5" />
-                  <circle cx="62" cy="72" r="1.5" />
-                  <circle cx="28" cy="68" r="1" />
-                  <circle cx="72" cy="28" r="1" />
-                  <circle cx="15" cy="40" r="1" />
-                  <circle cx="85" cy="55" r="1" />
-                  <circle cx="45" cy="22" r="1" />
-                  <circle cx="55" cy="78" r="1" />
-                  <circle cx="12" cy="58" r="0.8" />
-                  <circle cx="88" cy="38" r="0.8" />
+                  {/* Dense center cluster */}
+                  <circle cx="50" cy="50" r="4.5" />
+                  <circle cx="47" cy="47" r="3.5" />
+                  <circle cx="53" cy="48" r="3" />
+                  <circle cx="49" cy="53" r="3.5" />
+                  <circle cx="52" cy="52" r="2.5" />
+                  <circle cx="45" cy="50" r="3" />
+                  <circle cx="55" cy="50" r="2.5" />
+                  <circle cx="50" cy="45" r="2.5" />
+                  <circle cx="50" cy="55" r="3" />
+                  <circle cx="48" cy="48" r="2" />
+                  <circle cx="52" cy="46" r="2" />
+                  <circle cx="46" cy="52" r="2" />
+                  <circle cx="54" cy="54" r="2" />
+                  <circle cx="51" cy="43" r="2" />
+                  <circle cx="49" cy="57" r="2" />
+                  <circle cx="43" cy="49" r="2" />
+                  <circle cx="57" cy="51" r="2" />
+                  {/* Mid ring */}
+                  <circle cx="42" cy="44" r="2.5" />
+                  <circle cx="58" cy="46" r="2.5" />
+                  <circle cx="46" cy="56" r="2" />
+                  <circle cx="55" cy="42" r="2" />
+                  <circle cx="40" cy="54" r="2" />
+                  <circle cx="60" cy="56" r="2" />
+                  <circle cx="38" cy="48" r="1.5" />
+                  <circle cx="62" cy="50" r="1.5" />
+                  <circle cx="44" cy="40" r="1.5" />
+                  <circle cx="56" cy="60" r="1.5" />
+                  {/* Outer scatter */}
+                  <circle cx="35" cy="38" r="1.5" />
+                  <circle cx="65" cy="36" r="1.5" />
+                  <circle cx="68" cy="58" r="1.5" />
+                  <circle cx="32" cy="60" r="1.5" />
+                  <circle cx="25" cy="45" r="1" />
+                  <circle cx="75" cy="48" r="1" />
+                  <circle cx="20" cy="52" r="0.8" />
+                  <circle cx="80" cy="42" r="0.8" />
+                  <circle cx="15" cy="40" r="0.6" />
+                  <circle cx="85" cy="55" r="0.6" />
                 </g>
               )}
               {s.variant === 1 && (
                 <g fill="#c8ff00" fillOpacity="0.35">
-                  <circle cx="50" cy="50" r="3.5" />
-                  <circle cx="44" cy="42" r="3" />
-                  <circle cx="56" cy="48" r="2.5" />
-                  <circle cx="48" cy="58" r="3" />
-                  <circle cx="38" cy="50" r="2.5" />
-                  <circle cx="62" cy="44" r="2" />
-                  <circle cx="60" cy="60" r="2.5" />
-                  <circle cx="34" cy="36" r="2" />
-                  <circle cx="66" cy="34" r="1.5" />
-                  <circle cx="30" cy="55" r="1.5" />
-                  <circle cx="70" cy="56" r="2" />
-                  <circle cx="26" cy="42" r="1.5" />
-                  <circle cx="74" cy="50" r="1.5" />
-                  <circle cx="42" cy="30" r="1.5" />
-                  <circle cx="58" cy="70" r="1.5" />
-                  <circle cx="22" cy="48" r="1" />
-                  <circle cx="78" cy="40" r="1" />
-                  <circle cx="50" cy="24" r="1" />
-                  <circle cx="50" cy="76" r="1" />
-                  <circle cx="18" cy="55" r="0.8" />
-                  <circle cx="82" cy="60" r="0.8" />
-                  <circle cx="36" cy="72" r="1" />
-                  <circle cx="64" cy="26" r="1" />
-                  <circle cx="15" cy="35" r="0.8" />
+                  {/* Dense center cluster */}
+                  <circle cx="50" cy="50" r="4" />
+                  <circle cx="48" cy="48" r="3" />
+                  <circle cx="52" cy="52" r="3.5" />
+                  <circle cx="50" cy="46" r="2.5" />
+                  <circle cx="50" cy="54" r="3" />
+                  <circle cx="46" cy="50" r="3" />
+                  <circle cx="54" cy="50" r="2.5" />
+                  <circle cx="47" cy="53" r="2.5" />
+                  <circle cx="53" cy="47" r="2.5" />
+                  <circle cx="49" cy="44" r="2" />
+                  <circle cx="51" cy="56" r="2" />
+                  <circle cx="44" cy="48" r="2" />
+                  <circle cx="56" cy="52" r="2" />
+                  <circle cx="48" cy="42" r="1.5" />
+                  <circle cx="52" cy="58" r="1.5" />
+                  <circle cx="45" cy="55" r="2" />
+                  <circle cx="55" cy="45" r="2" />
+                  {/* Mid ring */}
+                  <circle cx="40" cy="44" r="2" />
+                  <circle cx="60" cy="56" r="2" />
+                  <circle cx="38" cy="52" r="1.5" />
+                  <circle cx="62" cy="48" r="1.5" />
+                  <circle cx="42" cy="38" r="1.5" />
+                  <circle cx="58" cy="62" r="1.5" />
+                  <circle cx="36" cy="46" r="1.5" />
+                  <circle cx="64" cy="54" r="1.5" />
+                  <circle cx="44" cy="60" r="1.5" />
+                  <circle cx="56" cy="40" r="1.5" />
+                  {/* Outer scatter */}
+                  <circle cx="30" cy="50" r="1" />
+                  <circle cx="70" cy="50" r="1" />
+                  <circle cx="34" cy="36" r="1" />
+                  <circle cx="66" cy="64" r="1" />
+                  <circle cx="22" cy="48" r="0.8" />
+                  <circle cx="78" cy="52" r="0.8" />
+                  <circle cx="18" cy="55" r="0.6" />
+                  <circle cx="82" cy="45" r="0.6" />
                 </g>
               )}
               {s.variant === 2 && (
                 <g fill="#c8ff00" fillOpacity="0.3">
-                  <circle cx="50" cy="50" r="3" />
-                  <circle cx="46" cy="44" r="2.5" />
-                  <circle cx="54" cy="56" r="2.5" />
-                  <circle cx="40" cy="52" r="3" />
-                  <circle cx="60" cy="48" r="2" />
-                  <circle cx="36" cy="40" r="2" />
-                  <circle cx="64" cy="60" r="2" />
-                  <circle cx="52" cy="36" r="2" />
-                  <circle cx="48" cy="64" r="2" />
-                  <circle cx="30" cy="46" r="1.5" />
-                  <circle cx="70" cy="54" r="1.5" />
-                  <circle cx="58" cy="32" r="1.5" />
-                  <circle cx="42" cy="68" r="1.5" />
-                  <circle cx="24" cy="52" r="1.5" />
-                  <circle cx="76" cy="44" r="1" />
-                  <circle cx="34" cy="30" r="1" />
-                  <circle cx="66" cy="70" r="1" />
-                  <circle cx="20" cy="38" r="1" />
-                  <circle cx="80" cy="58" r="1" />
-                  <circle cx="44" cy="24" r="1" />
-                  <circle cx="56" cy="76" r="1" />
+                  {/* Dense center cluster */}
+                  <circle cx="50" cy="50" r="4" />
+                  <circle cx="47" cy="52" r="3.5" />
+                  <circle cx="53" cy="48" r="3" />
+                  <circle cx="50" cy="47" r="3" />
+                  <circle cx="50" cy="53" r="2.5" />
+                  <circle cx="46" cy="49" r="2.5" />
+                  <circle cx="54" cy="51" r="3" />
+                  <circle cx="48" cy="45" r="2" />
+                  <circle cx="52" cy="55" r="2.5" />
+                  <circle cx="45" cy="53" r="2" />
+                  <circle cx="55" cy="47" r="2" />
+                  <circle cx="51" cy="42" r="2" />
+                  <circle cx="49" cy="58" r="2" />
+                  <circle cx="43" cy="46" r="1.5" />
+                  <circle cx="57" cy="54" r="1.5" />
+                  <circle cx="53" cy="43" r="1.5" />
+                  <circle cx="47" cy="57" r="1.5" />
+                  {/* Mid ring */}
+                  <circle cx="40" cy="50" r="2" />
+                  <circle cx="60" cy="50" r="2" />
+                  <circle cx="42" cy="42" r="1.5" />
+                  <circle cx="58" cy="58" r="1.5" />
+                  <circle cx="38" cy="56" r="1.5" />
+                  <circle cx="62" cy="44" r="1.5" />
+                  <circle cx="36" cy="48" r="1.5" />
+                  <circle cx="64" cy="52" r="1.5" />
+                  <circle cx="44" cy="62" r="1.5" />
+                  <circle cx="56" cy="38" r="1.5" />
+                  {/* Outer scatter */}
+                  <circle cx="30" cy="46" r="1" />
+                  <circle cx="70" cy="54" r="1" />
+                  <circle cx="24" cy="52" r="1" />
+                  <circle cx="76" cy="48" r="1" />
+                  <circle cx="34" cy="34" r="0.8" />
+                  <circle cx="66" cy="66" r="0.8" />
+                  <circle cx="20" cy="42" r="0.6" />
+                  <circle cx="80" cy="58" r="0.6" />
+                  <circle cx="44" cy="24" r="0.6" />
+                  <circle cx="56" cy="76" r="0.6" />
                   <circle cx="14" cy="48" r="0.8" />
                   <circle cx="86" cy="50" r="0.8" />
                   <circle cx="28" cy="66" r="0.8" />
