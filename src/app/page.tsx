@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useCallback, useRef } from "react";
 import Image from "next/image";
 import { supabase } from "@/lib/supabase";
 import {
@@ -306,6 +306,28 @@ export default function NebiusBuildPage() {
   const [speakerSubmitted, setSpeakerSubmitted] = useState(false);
   const [activeTab, setActiveTab] = useState<HomeTab>("overview");
 
+  // Paint splash effect
+  const [splashes, setSplashes] = useState<{ id: number; x: number; y: number; scale: number; rotation: number; variant: number }[]>([]);
+  const splashIdRef = useRef(0);
+  const lastSplashTime = useRef(0);
+
+  const handleHeroMouseMove = useCallback((e: React.MouseEvent<HTMLElement>) => {
+    const now = Date.now();
+    if (now - lastSplashTime.current < 80) return;
+    lastSplashTime.current = now;
+
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const id = splashIdRef.current++;
+    const scale = 0.5 + Math.random() * 0.8;
+    const rotation = Math.random() * 360;
+    const variant = Math.floor(Math.random() * 3);
+
+    setSplashes(prev => [...prev.slice(-30), { id, x, y, scale, rotation, variant }]);
+    setTimeout(() => setSplashes(prev => prev.filter(s => s.id !== id)), 2000);
+  }, []);
+
   const goToTab = (tab: HomeTab) => {
     setActiveTab(tab);
     setMobileMenuOpen(false);
@@ -597,11 +619,72 @@ export default function NebiusBuildPage() {
       </nav>
       <div className={activeTab === "overview" ? "" : "hidden"}>
       {/* Hero */}
-      <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+      <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20" onMouseMove={handleHeroMouseMove}>
         {/* Animated gradient background */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a2e] via-[#0a0a0a] to-[#1a2e1a]/30" />
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#c8ff00]/5 rounded-full blur-3xl" />
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#c8ff00]/5 rounded-full blur-3xl" />
+
+        {/* Paint splashes */}
+        <div className="absolute inset-0 z-[5] pointer-events-none overflow-hidden">
+          {splashes.map(s => (
+            <svg
+              key={s.id}
+              className="absolute animate-[splashIn_0.3s_ease-out_forwards,splashFade_2s_ease-out_forwards]"
+              style={{
+                left: s.x - 30 * s.scale,
+                top: s.y - 30 * s.scale,
+                width: 60 * s.scale,
+                height: 60 * s.scale,
+                transform: `rotate(${s.rotation}deg)`,
+              }}
+              viewBox="0 0 100 100"
+            >
+              {s.variant === 0 && (
+                <g fill="#c8ff00" fillOpacity="0.4">
+                  <circle cx="50" cy="50" r="18" />
+                  <ellipse cx="25" cy="35" rx="8" ry="5" />
+                  <ellipse cx="75" cy="30" rx="6" ry="4" />
+                  <ellipse cx="70" cy="70" rx="7" ry="5" />
+                  <ellipse cx="30" cy="72" rx="5" ry="4" />
+                  <circle cx="15" cy="50" r="3" />
+                  <circle cx="85" cy="50" r="3" />
+                  <circle cx="50" cy="15" r="3" />
+                  <circle cx="50" cy="85" r="2" />
+                  <ellipse cx="40" cy="25" rx="4" ry="3" />
+                  <ellipse cx="62" cy="78" rx="4" ry="3" />
+                </g>
+              )}
+              {s.variant === 1 && (
+                <g fill="#c8ff00" fillOpacity="0.35">
+                  <path d="M50 30 Q60 50 50 70 Q40 50 50 30Z" />
+                  <circle cx="50" cy="50" r="15" />
+                  <circle cx="30" cy="40" r="5" />
+                  <circle cx="70" cy="40" r="4" />
+                  <circle cx="35" cy="65" r="4" />
+                  <circle cx="68" cy="62" r="5" />
+                  <circle cx="20" cy="55" r="2" />
+                  <circle cx="80" cy="48" r="2" />
+                  <circle cx="45" cy="20" r="3" />
+                  <circle cx="58" cy="82" r="2" />
+                </g>
+              )}
+              {s.variant === 2 && (
+                <g fill="#c8ff00" fillOpacity="0.3">
+                  <ellipse cx="50" cy="50" rx="20" ry="16" />
+                  <ellipse cx="28" cy="42" rx="10" ry="6" transform="rotate(-20 28 42)" />
+                  <ellipse cx="72" cy="45" rx="9" ry="5" transform="rotate(15 72 45)" />
+                  <ellipse cx="40" cy="72" rx="8" ry="4" transform="rotate(10 40 72)" />
+                  <ellipse cx="65" cy="30" rx="7" ry="4" transform="rotate(-10 65 30)" />
+                  <circle cx="18" cy="55" r="3" />
+                  <circle cx="82" cy="55" r="3" />
+                  <circle cx="50" cy="18" r="2" />
+                  <circle cx="42" cy="85" r="2" />
+                </g>
+              )}
+            </svg>
+          ))}
+        </div>
 
         <div className="relative z-10 text-center w-full">
           <Image
