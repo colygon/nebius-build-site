@@ -55,12 +55,12 @@ const partners = [
     name: "Ultimate Fighting Bots",
     url: "https://ufb.gg/",
     logo: "/logos/ufb.png",
-    description: "Fleet access from Unitree hardware + support, with optional mentor guidance for longer build paths.",
+    description: "Robotics hardware and competition platform.",
   },
   {
     name: "SoloTech",
     url: "https://getsolo.tech",
-    description: "~45 SO-101 robot arms available (up to 60 by event time). Easy to set up and hack in a single-day format.",
+    description: "Robot arms and hardware kits for hands-on hacking.",
   },
   {
     name: "OpenDroids",
@@ -182,12 +182,12 @@ const robotAccess = [
   {
     name: "SoloTech",
     detail:
-      "~45 SO-101 robot arms available (60 by event time). Easy to set up and hack in a single-day format.",
+      "Robot arms and hardware kits for hands-on hacking.",
   },
   {
     name: "UFB",
     detail:
-      "Fleet access from Unitree hardware + support, with optional mentor guidance for longer build paths.",
+      "Robotics hardware and competition platform.",
   },
   {
     name: "OpenDroids",
