@@ -1170,43 +1170,22 @@ export default function NebiusBuildPage() {
           </div>
 
           {/* Judges */}
-          <h3 className="text-sm uppercase tracking-widest text-white/40 mb-2">Judges</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-            <div>
-              <h4 className="text-xs uppercase tracking-widest text-white/30 mb-4">Phase 1</h4>
-              <div className="grid grid-cols-2 gap-4">
-                {[
-                  { name: "Aleks P", org: "Nebius" },
-                  { name: "Vitaly", org: "Nebius" },
-                ].map((person, i) => (
-                  <div key={`judge-p1-${i}`} className="border border-white/10 bg-white/[0.02] p-4 text-center group hover:border-white/20 transition-colors">
-                    <div className="w-14 h-14 mx-auto mb-3 rounded-full border border-white/10 flex items-center justify-center bg-white/5 text-white/30 text-lg font-bold">
-                      {person.name.split(" ").map(n => n[0]).join("")}
-                    </div>
-                    <p className="font-semibold text-sm">{person.name}</p>
-                    <p className="text-xs text-white/50 mt-0.5">{person.org}</p>
-                    <p className="text-xs text-[#c8ff00]/70 mt-1">Judge</p>
-                  </div>
-                ))}
+          <h3 className="text-sm uppercase tracking-widest text-white/40 mb-6">Judges</h3>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mb-12">
+            {[
+              { name: "Aleks P", org: "Nebius" },
+              { name: "Vitaly", org: "Nebius" },
+              { name: "Dylan Patel", org: "" },
+            ].map((person, i) => (
+              <div key={`judge-${i}`} className="border border-white/10 bg-white/[0.02] p-4 text-center group hover:border-white/20 transition-colors">
+                <div className="w-14 h-14 mx-auto mb-3 rounded-full border border-white/10 flex items-center justify-center bg-white/5 text-white/30 text-lg font-bold">
+                  {person.name.split(" ").map(n => n[0]).join("")}
+                </div>
+                <p className="font-semibold text-sm">{person.name}</p>
+                {person.org && <p className="text-xs text-white/50 mt-0.5">{person.org}</p>}
+                <p className="text-xs text-[#c8ff00]/70 mt-1">Judge</p>
               </div>
-            </div>
-            <div>
-              <h4 className="text-xs uppercase tracking-widest text-white/30 mb-4">Finals</h4>
-              <div className="grid grid-cols-2 gap-4">
-                {[
-                  { name: "Dylan Patel", org: "" },
-                ].map((person, i) => (
-                  <div key={`judge-finals-${i}`} className="border border-white/10 bg-white/[0.02] p-4 text-center group hover:border-white/20 transition-colors">
-                    <div className="w-14 h-14 mx-auto mb-3 rounded-full border border-white/10 flex items-center justify-center bg-white/5 text-white/30 text-lg font-bold">
-                      {person.name.split(" ").map(n => n[0]).join("")}
-                    </div>
-                    <p className="font-semibold text-sm">{person.name}</p>
-                    {person.org && <p className="text-xs text-white/50 mt-0.5">{person.org}</p>}
-                    <p className="text-xs text-[#c8ff00]/70 mt-1">Judge</p>
-                  </div>
-                ))}
-              </div>
-            </div>
+            ))}
           </div>
 
           <button
