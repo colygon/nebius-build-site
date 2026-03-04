@@ -229,7 +229,7 @@ const livestreamTabs = [
     key: "friday",
     label: "Robotics & Physical AI",
     title: "Nebius.Build — Robotics & Physical AI",
-    url: "https://www.youtube.com/embed/Btmqbz3-7bY?list=PLB6z9TepeSqkxPBbhtNLXxJPeIgiv3r4u&autoplay=1",
+    url: "https://www.youtube.com/embed/Btmqbz3-7bY?list=PLB6z9TepeSqkxPBbhtNLXxJPeIgiv3r4u&autoplay=0",
   },
   {
     key: "saturday",
@@ -241,7 +241,7 @@ const livestreamTabs = [
     key: "tokenFactory",
     label: "Token Factory",
     title: "Nebius.Build — Token Factory",
-    url: "https://www.youtube.com/embed/mMdnzO6rBDU?list=PLB6z9TepeSqlZ_4dd9_Y7qQMthezdXL3D&autoplay=1",
+    url: "https://www.youtube.com/embed/mMdnzO6rBDU?list=PLB6z9TepeSqlZ_4dd9_Y7qQMthezdXL3D&autoplay=0",
   },
 ] as const;
 
@@ -1473,9 +1473,7 @@ export default function NebiusBuildPage() {
       <section className="py-32 px-6 border-t border-white/10 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-t from-[#1a2e1a]/20 to-transparent" />
         <div className="relative z-10 max-w-4xl mx-auto text-center">
-          <h2 className="text-5xl md:text-7xl font-bold mb-6 tracking-tighter">
-            Build With Us
-          </h2>
+          <Image src="/logos/buildwithus.png" alt="Build With Us" width={800} height={200} className="h-20 md:h-28 w-auto mb-6 mx-auto" />
           <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white/60 mb-12 max-w-4xl md:max-w-5xl mx-auto">
             The AI revolution is here. Demo your agent on the biggest stage in San Francisco.
           </p>
