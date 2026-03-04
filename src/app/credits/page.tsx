@@ -250,7 +250,7 @@ export default function CreditsPage() {
       {/* Footer */}
       <footer className="py-12 px-6 border-t border-white/10">
         <div className="max-w-6xl mx-auto text-center text-sm text-white/30">
-          <p>Nebius.Build — The 2026 AI + Robotics Hackathon</p>
+          <p>Nebius.Build — The 2026 Inference & Robotics Challenges</p>
           <p className="mt-2">March 14, 2026 / San Francisco, CA</p>
         </div>
       </footer>

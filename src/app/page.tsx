@@ -396,10 +396,10 @@ export default function NebiusBuildPage() {
             onClick={() => goToTab("overview")}
             className="flex items-center"
           >
-            <Image src="/logos/nebius-build-logo.png" alt="Nebius.Build" width={300} height={100} className="hidden md:block h-12 w-auto" />
+            <Image src="/logos/nebiusbuild.png" alt="Nebius.Build" width={300} height={100} className="hidden md:block h-12 w-auto" />
           </button>
           <button type="button" onClick={() => goToTab("overview")} className="md:hidden absolute left-1/2 -translate-x-1/2">
-            <Image src="/logos/nebius-build-logo.png" alt="Nebius.Build" width={300} height={100} className="h-14 w-auto" />
+            <Image src="/logos/nebiusbuild.png" alt="Nebius.Build" width={300} height={100} className="h-14 w-auto" />
           </button>
           <div className="hidden md:flex items-center gap-8 text-sm text-white/60">
             <button
@@ -609,7 +609,7 @@ export default function NebiusBuildPage() {
             alt="Nebius.Build"
             width={1080}
             height={1080}
-            className="w-full max-w-md md:max-w-lg mx-auto mb-8 relative z-10"
+            className="w-full max-w-md md:max-w-lg mx-auto mt-4 relative z-10"
             priority
           />
 
@@ -624,7 +624,7 @@ export default function NebiusBuildPage() {
 
           <div className="px-6 max-w-5xl mx-auto">
           <p className="text-xl md:text-3xl text-white/70 max-w-3xl mx-auto mb-4 font-light">
-            AI + Robotics Hackathon
+            Inference & Robotics Challenges
           </p>
 
 <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
@@ -679,20 +679,20 @@ export default function NebiusBuildPage() {
 
           <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-16 text-center pb-12">
             <div>
-              <div className="text-4xl md:text-5xl font-bold">2,000+</div>
-              <div className="text-sm text-white/50 uppercase tracking-wider mt-1">Teams</div>
+              <div className="text-4xl md:text-5xl font-bold">150</div>
+              <div className="text-sm text-white/50 uppercase tracking-wider mt-1">Hackers</div>
             </div>
             <div className="hidden md:block w-px h-12 bg-white/20" />
             <div className="md:hidden w-16 h-px bg-white/20" />
             <div>
-              <div className="text-4xl md:text-5xl font-bold">200</div>
-              <div className="text-sm text-white/50 uppercase tracking-wider mt-1">Finalists</div>
+              <div className="text-4xl md:text-5xl font-bold">$25,000</div>
+              <div className="text-sm text-white/50 uppercase tracking-wider mt-1">In Cash Prizes</div>
             </div>
             <div className="hidden md:block w-px h-12 bg-white/20" />
             <div className="md:hidden w-16 h-px bg-white/20" />
             <div>
-              <div className="text-4xl md:text-5xl font-bold">2</div>
-              <div className="text-sm text-white/50 uppercase tracking-wider mt-1">$25,000 Grand Prize</div>
+              <div className="text-4xl md:text-5xl font-bold">13</div>
+              <div className="text-sm text-white/50 uppercase tracking-wider mt-1">Mentors</div>
             </div>
           </div>
         </div>
@@ -1414,7 +1414,7 @@ export default function NebiusBuildPage() {
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center gap-8 mb-8">
             <div className="flex items-center">
-              <Image src="/logos/nebius-build-logo.png" alt="Nebius.Build" width={300} height={100} className="h-12 md:h-16 w-auto" />
+              <Image src="/logos/nebiusbuild.png" alt="Nebius.Build" width={300} height={100} className="h-12 md:h-16 w-auto" />
             </div>
             <div className="flex items-center gap-6 text-sm text-white/40">
               <button onClick={() => goToTab("schedule")} className="hover:text-white transition-colors text-left">When</button>

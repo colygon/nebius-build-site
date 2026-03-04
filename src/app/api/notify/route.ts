@@ -114,7 +114,7 @@ function nominationConfirmationHtml(data: Record<string, unknown>): string {
   return `
 <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 600px; margin: 0 auto; background: #0a0a0a; color: #ffffff; padding: 40px 30px; border: 1px solid rgba(255,255,255,0.1);">
   <h1 style="font-size: 24px; margin: 0 0 8px 0;">Nebius.Build</h1>
-  <p style="color: rgba(255,255,255,0.5); font-size: 14px; margin: 0 0 30px 0;">AI + Robotics Hackathon &middot; March 15, 2026</p>
+  <p style="color: rgba(255,255,255,0.5); font-size: 14px; margin: 0 0 30px 0;">Inference &amp; Robotics Challenges &middot; March 15, 2026</p>
   <hr style="border: none; border-top: 1px solid rgba(255,255,255,0.1); margin: 0 0 30px 0;" />
   <h2 style="font-size: 20px; margin: 0 0 16px 0;">Congratulations!</h2>
   <p style="color: rgba(255,255,255,0.7); line-height: 1.6; margin: 0 0 24px 0;">
