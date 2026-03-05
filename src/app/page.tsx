@@ -1154,47 +1154,31 @@ export default function NebiusBuildPage() {
             ))}
           </div>
 
-          {/* Mentors */}
-          <h3 className="text-sm uppercase tracking-widest text-white/40 mb-6">Mentors</h3>
+          {/* Mentors & Judges */}
+          <h3 className="text-sm uppercase tracking-widest text-white/40 mb-6">Mentors & Judges</h3>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mb-12">
             {[
-              { name: "Sujee Maniyam", org: "Nebius" },
-              { name: "Masha Stroganova", org: "Nebius" },
-              { name: "Mashrur Haider", org: "Nebius" },
-              { name: "Alexander Hanley", org: "Tavily" },
-              { name: "Stefan Webb", org: "Oumi" },
-              { name: "Tony Loehr", org: "Cline" },
-              { name: "Bhavini Joshi", org: "Cline" },
-              { name: "TBC", org: "Nebius" },
-              { name: "TBC", org: "Minimax" },
+              { name: "Aleks P", org: "Nebius — Head of AI Product", role: "Judge" },
+              { name: "Vitaly", org: "Nebius", role: "Judge" },
+              { name: "Colin L.", org: "Dabl Club", role: "Judge" },
+              { name: "Pavani", org: "NVIDIA", role: "Judge" },
+              { name: "Sujee Maniyam", org: "Nebius", role: "Mentor" },
+              { name: "Masha Stroganova", org: "Nebius", role: "Mentor" },
+              { name: "Mashrur Haider", org: "Nebius", role: "Mentor" },
+              { name: "Alexander Hanley", org: "Tavily", role: "Mentor" },
+              { name: "Stefan Webb", org: "Oumi", role: "Mentor" },
+              { name: "Tony Loehr", org: "Cline", role: "Mentor" },
+              { name: "Bhavini Joshi", org: "Cline", role: "Mentor" },
+              { name: "TBC", org: "Nebius", role: "Mentor" },
+              { name: "TBC", org: "Minimax", role: "Mentor" },
             ].map((person, i) => (
-              <div key={`mentor-${person.org}-${i}`} className="border border-white/10 bg-white/[0.02] p-4 text-center group hover:border-white/20 transition-colors">
+              <div key={`person-${i}`} className="border border-white/10 bg-white/[0.02] p-4 text-center group hover:border-white/20 transition-colors">
                 <div className="w-14 h-14 mx-auto mb-3 rounded-full border border-white/10 flex items-center justify-center bg-white/5 text-white/30 text-lg font-bold">
                   {person.name === "TBC" ? "?" : person.name.split(" ").map(n => n[0]).join("")}
                 </div>
                 <p className="font-semibold text-sm">{person.name}</p>
                 <p className="text-xs text-white/50 mt-0.5">{person.org}</p>
-                <p className="text-xs text-[#c8ff00]/70 mt-1">Mentor</p>
-              </div>
-            ))}
-          </div>
-
-          {/* Judges */}
-          <h3 className="text-sm uppercase tracking-widest text-white/40 mb-6">Judges</h3>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mb-12">
-            {[
-              { name: "Aleks P", org: "Nebius — Head of AI Product" },
-              { name: "Vitaly", org: "Nebius" },
-              { name: "Colin L.", org: "Dabl Club" },
-              { name: "Pavani", org: "NVIDIA" },
-            ].map((person, i) => (
-              <div key={`judge-${i}`} className="border border-white/10 bg-white/[0.02] p-4 text-center group hover:border-white/20 transition-colors">
-                <div className="w-14 h-14 mx-auto mb-3 rounded-full border border-white/10 flex items-center justify-center bg-white/5 text-white/30 text-lg font-bold">
-                  {person.name.split(" ").map(n => n[0]).join("")}
-                </div>
-                <p className="font-semibold text-sm">{person.name}</p>
-                {person.org && <p className="text-xs text-white/50 mt-0.5">{person.org}</p>}
-                <p className="text-xs text-[#c8ff00]/70 mt-1">Judge</p>
+                <p className="text-xs text-[#c8ff00]/70 mt-1">{person.role}</p>
               </div>
             ))}
           </div>
