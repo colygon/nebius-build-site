@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight, Check } from "lucide-react";
-import { supabase } from "@/lib/supabase";
+import { convex } from "@/lib/convex";
 
 const roles = ["Partner", "Sponsor", "Promoter", "Volunteer", "Judge", "Mentor", "Speaker", "Artist", "Press"] as const;
 
@@ -32,30 +32,23 @@ export default function RegisterPage() {
 
     const roleString = selectedRoles.map(r => r.toLowerCase()).join(", ");
 
-    const { error: dbError } = await supabase.from("people_applications").insert({
-      role: roleString,
-      name: form.name,
-      email: form.email,
-      organization: form.company || null,
-      question_one: [form.website, form.linkedin, form.twitter, form.phone && `Phone: ${form.phone}`].filter(Boolean).join(" | ") || null,
-      question_two: form.message || null,
-    });
+    try {
+      // Push to Convex
+      if (convex) {
+        await convex.mutation("registrations:submit" as any, {
+          roles: roleString,
+          name: form.name,
+          email: form.email,
+          company: form.company || undefined,
+          website: form.website || undefined,
+          linkedin: form.linkedin || undefined,
+          twitter: form.twitter || undefined,
+          phone: form.phone || undefined,
+          message: form.message || undefined,
+        });
+      }
 
-    setSubmitting(false);
-
-    if (dbError) {
-      setError("Something went wrong. Please try again.");
-      console.error("Supabase error:", dbError);
-    } else {
       setSubmitted(true);
-      fetch("/api/notify", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          type: "register",
-          data: { ...form, role: roleString },
-        }),
-      }).catch(() => {});
 
       // Push to Google Sheet
       const sheetUrl = process.env.NEXT_PUBLIC_GOOGLE_SHEET_WEBHOOK_URL;
@@ -78,7 +71,22 @@ export default function RegisterPage() {
           }),
         }).catch(() => {});
       }
+
+      // Send email notification
+      fetch("/api/notify", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          type: "register",
+          data: { ...form, role: roleString },
+        }),
+      }).catch(() => {});
+    } catch (err) {
+      setError("Something went wrong. Please try again.");
+      console.error("Submit error:", err);
     }
+
+    setSubmitting(false);
   };
 
   return (
