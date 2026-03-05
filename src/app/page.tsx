@@ -827,7 +827,7 @@ export default function NebiusBuildPage() {
             <div className="hidden md:block w-px h-12 bg-white/20" />
             <div className="md:hidden w-16 h-px bg-white/20" />
             <div>
-              <div className="text-4xl md:text-5xl font-bold">50</div>
+              <div className="text-4xl md:text-5xl font-bold">20+</div>
               <div className="text-sm text-white/50 uppercase tracking-wider mt-1">Robots</div>
             </div>
           </div>
