@@ -203,7 +203,7 @@ const faqs = [
   {
     q: "Can I apply to be a judge, mentor, volunteer, partner, or press?",
     a: "Yes — use the Partner / Volunteer Interest form and choose the role you want to support. We ask role-specific questions and then confirm availability and next steps by email.",
-    link: { text: "Apply Here", href: "#" },
+    link: { text: "Apply Here", href: "/register" },
   },
 ];
 
