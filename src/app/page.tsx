@@ -92,6 +92,31 @@ const partners = [
     url: "https://vllm.ai/",
     description: "High-performance model serving and open infrastructure for LLM inference.",
   },
+  {
+    name: "Tavily",
+    url: "https://tavily.com",
+    description: "AI-native search API for building agents with real-time web access.",
+  },
+  {
+    name: "Toloka",
+    url: "https://toloka.ai",
+    description: "Data labeling and human evaluation platform for AI workflows.",
+  },
+  {
+    name: "Oumi",
+    url: "https://oumi.ai",
+    description: "Open-source platform for training and fine-tuning foundation models.",
+  },
+  {
+    name: "Artificial Analysis",
+    url: "https://artificialanalysis.ai/",
+    description: "Independent benchmarks and analysis for AI model performance and pricing.",
+  },
+  {
+    name: "Minimax",
+    url: "https://www.minimax.io",
+    description: "Multimodal AI models for text, voice, and video generation.",
+  },
 ];
 
 const libraryLinks = [
