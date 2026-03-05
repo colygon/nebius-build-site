@@ -78,24 +78,9 @@ const partners = [
     description: "Core platform for agent collaboration and orchestration across workshop tracks.",
   },
   {
-    name: "Physical Intelligence",
-    url: "https://www.pi.website/",
-    description: "Research-backed robotics intelligence approaches and practical AI tool inspiration.",
-  },
-  {
-    name: "Skild AI",
-    url: "https://www.skild.ai/",
-    description: "Smart scheduling and orchestration tooling to streamline team collaboration.",
-  },
-  {
     name: "Hugging Face",
     url: "https://huggingface.co/",
     description: "Model and dataset ecosystem for rapid experimentation and sharing.",
-  },
-  {
-    name: "Skypilot",
-    url: "https://skypilot.readthedocs.io/",
-    description: "Cloud orchestration for scalable compute setup and reproducible runs.",
   },
   {
     name: "LangChain",
