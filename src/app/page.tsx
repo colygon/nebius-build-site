@@ -1185,7 +1185,8 @@ export default function NebiusBuildPage() {
             {[
               { name: "Aleks P", org: "Nebius" },
               { name: "Vitaly", org: "Nebius" },
-              { name: "Dylan Patel", org: "" },
+              { name: "Colin L.", org: "Dabl Club" },
+              { name: "Pavani", org: "NVIDIA" },
             ].map((person, i) => (
               <div key={`judge-${i}`} className="border border-white/10 bg-white/[0.02] p-4 text-center group hover:border-white/20 transition-colors">
                 <div className="w-14 h-14 mx-auto mb-3 rounded-full border border-white/10 flex items-center justify-center bg-white/5 text-white/30 text-lg font-bold">
