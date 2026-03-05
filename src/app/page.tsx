@@ -1127,9 +1127,9 @@ export default function NebiusBuildPage() {
                 rel="noopener noreferrer"
                 className="border border-white/10 p-5 bg-white/[0.02] hover:border-[#c8ff00]/40 transition-colors group"
               >
-                <div className="flex items-start gap-3">
+                <div className="flex items-center gap-4">
                   {partner.logo ? (
-                    <div className="w-20 h-12 relative shrink-0">
+                    <div className="w-16 h-16 relative shrink-0">
                       <Image
                         src={partner.logo}
                         alt={partner.name}
@@ -1138,7 +1138,7 @@ export default function NebiusBuildPage() {
                       />
                     </div>
                   ) : null}
-                  <div>
+                  <div className="min-w-0">
                     <h4 className="font-semibold text-white group-hover:text-[#c8ff00] transition-colors">{partner.name}</h4>
                     <p className="text-sm text-white/60 mt-1 leading-relaxed">{partner.description}</p>
                   </div>
