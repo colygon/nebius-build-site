@@ -1152,12 +1152,12 @@ export default function NebiusBuildPage() {
           <div className="flex flex-wrap items-center justify-center gap-3 mb-16">
             {[
               { label: "Hacker", action: openRegister },
-              { label: "Partner", action: () => goToTab("people") },
+              { label: "Partner", action: () => window.open("/partner", "_self") },
               { label: "Sponsor", action: () => window.open("/sponsor", "_self") },
-              { label: "Press", action: () => goToTab("people") },
-              { label: "Judge", action: () => goToTab("people") },
-              { label: "Volunteer", action: () => goToTab("people") },
-              { label: "Mentor", action: () => goToTab("people") },
+              { label: "Press", action: () => window.open("/partner", "_self") },
+              { label: "Judge", action: () => window.open("/partner", "_self") },
+              { label: "Volunteer", action: () => window.open("/partner", "_self") },
+              { label: "Mentor", action: () => window.open("/partner", "_self") },
             ].map((item) => (
               <button
                 key={item.label}
@@ -1208,7 +1208,7 @@ export default function NebiusBuildPage() {
 
           <button
             type="button"
-            onClick={() => goToTab("people")}
+            onClick={() => window.open("/partner", "_self")}
             className="border border-white/20 px-8 py-4 text-lg font-semibold hover:border-white/40 transition-colors inline-flex items-center gap-3 text-white/80"
           >
             Apply to Join
