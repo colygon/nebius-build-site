@@ -6,7 +6,7 @@ import Link from "next/link";
 import { ArrowLeft, ArrowRight, Check } from "lucide-react";
 import { supabase } from "@/lib/supabase";
 
-const roles = ["Partner", "Volunteer", "Judge", "Mentor", "Speaker", "Press"] as const;
+const roles = ["Partner", "Sponsor", "Promoter", "Volunteer", "Judge", "Mentor", "Speaker", "Press"] as const;
 
 export default function RegisterPage() {
   const [selectedRoles, setSelectedRoles] = useState<string[]>([]);
