@@ -82,7 +82,7 @@ export default function RegisterPage() {
               Partner Registration
             </h1>
             <p className="text-lg text-white/60 max-w-lg mx-auto">
-              Join Nebius.Build as a partner, volunteer, judge, mentor, or press.
+              Join Nebius.Build as a partner, speaker, volunteer, judge, mentor, or press.
             </p>
           </div>
 
