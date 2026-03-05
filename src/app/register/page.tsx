@@ -56,6 +56,28 @@ export default function RegisterPage() {
           data: { ...form, role: roleString },
         }),
       }).catch(() => {});
+
+      // Push to Google Sheet
+      const sheetUrl = process.env.NEXT_PUBLIC_GOOGLE_SHEET_WEBHOOK_URL;
+      if (sheetUrl) {
+        fetch(sheetUrl, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          mode: "no-cors",
+          body: JSON.stringify({
+            timestamp: new Date().toISOString(),
+            roles: roleString,
+            name: form.name,
+            email: form.email,
+            company: form.company,
+            website: form.website,
+            linkedin: form.linkedin,
+            twitter: form.twitter,
+            phone: form.phone,
+            message: form.message,
+          }),
+        }).catch(() => {});
+      }
     }
   };
 
