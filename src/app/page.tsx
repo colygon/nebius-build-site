@@ -1183,7 +1183,7 @@ export default function NebiusBuildPage() {
           <h3 className="text-sm uppercase tracking-widest text-white/40 mb-6">Judges</h3>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mb-12">
             {[
-              { name: "Aleks P", org: "Nebius" },
+              { name: "Aleks P", org: "Nebius — Head of AI Product" },
               { name: "Vitaly", org: "Nebius" },
               { name: "Colin L.", org: "Dabl Club" },
               { name: "Pavani", org: "NVIDIA" },
