@@ -79,7 +79,7 @@ export default function RegisterPage() {
           {/* Header */}
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
-              Register Interest
+              Partner Registration
             </h1>
             <p className="text-lg text-white/60 max-w-lg mx-auto">
               Join Nebius.Build as a partner, volunteer, judge, mentor, or press.
