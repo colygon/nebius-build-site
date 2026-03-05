@@ -1169,12 +1169,11 @@ export default function NebiusBuildPage() {
               { name: "Stefan Webb", org: "Oumi", role: "Mentor" },
               { name: "Tony Loehr", org: "Cline", role: "Mentor" },
               { name: "Bhavini Joshi", org: "Cline", role: "Mentor" },
-              { name: "TBC", org: "Nebius", role: "Mentor" },
-              { name: "TBC", org: "Minimax", role: "Mentor" },
+              { name: "TBA", org: "Minimax", role: "Mentor" },
             ].map((person, i) => (
               <div key={`person-${i}`} className="border border-white/10 bg-white/[0.02] p-4 text-center group hover:border-white/20 transition-colors">
                 <div className="w-14 h-14 mx-auto mb-3 rounded-full border border-white/10 flex items-center justify-center bg-white/5 text-white/30 text-lg font-bold">
-                  {person.name === "TBC" ? "?" : person.name.split(" ").map(n => n[0]).join("")}
+                  {person.name === "TBA" ? "?" : person.name.split(" ").map(n => n[0]).join("")}
                 </div>
                 <p className="font-semibold text-sm">{person.name}</p>
                 <p className="text-xs text-white/50 mt-0.5">{person.org}</p>
