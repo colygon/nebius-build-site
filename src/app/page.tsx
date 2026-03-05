@@ -1155,6 +1155,14 @@ export default function NebiusBuildPage() {
               { name: "Tony Loehr", org: "Cline", role: "Mentor" },
               { name: "Bhavini Joshi", org: "Cline", role: "Mentor" },
               { name: "TBA", org: "Minimax", role: "Mentor" },
+              { name: "TBA", org: "OpenRouter", role: "Judge" },
+              { name: "TBA", org: "Ultimate Fighting Bots", role: "Judge" },
+              { name: "TBA", org: "SoloTech", role: "Judge" },
+              { name: "TBA", org: "OpenClaw", role: "Judge" },
+              { name: "TBA", org: "Hugging Face", role: "Judge" },
+              { name: "TBA", org: "LangChain", role: "Judge" },
+              { name: "TBA", org: "Toloka", role: "Judge" },
+              { name: "TBA", org: "Artificial Analysis", role: "Judge" },
             ].map((person, i) => (
               <div key={`person-${i}`} className="border border-white/10 bg-white/[0.02] p-4 text-center group hover:border-white/20 transition-colors">
                 <div className="w-14 h-14 mx-auto mb-3 rounded-full border border-white/10 flex items-center justify-center bg-white/5 text-white/30 text-lg font-bold">
