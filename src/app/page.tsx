@@ -795,7 +795,7 @@ export default function NebiusBuildPage() {
 
           <div className="px-6 max-w-5xl mx-auto">
           <p className="text-xl md:text-3xl text-white/70 max-w-3xl mx-auto mb-4 font-light">
-            Inference & Robotics Hackathon
+            OpenClaw + Robotics Hackathon
           </p>
 
 <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">

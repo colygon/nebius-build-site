@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Nominees | Nebius.Build — Inference & Robotics Hackathon",
+  title: "Nominees | Nebius.Build — OpenClaw + Robotics Hackathon",
   description:
     "Official nominees, scores, rankings, and awards for Nebius.Build Demo Day, March 15, 2026.",
 };
