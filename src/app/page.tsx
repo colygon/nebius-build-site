@@ -63,11 +63,6 @@ const partners = [
     description: "Robot arms and hardware kits for hands-on hacking.",
   },
   {
-    name: "OpenDroids",
-    url: "https://opendroids.com",
-    description: "Additional robotic assets and kits to add diversity to workshop demos and challenges.",
-  },
-  {
     name: "NVIDIA",
     url: "https://www.nvidia.com/",
     description: "AI infrastructure and ecosystem support for high-performance model development.",
@@ -193,11 +188,6 @@ const robotAccess = [
     name: "UFB",
     detail:
       "Robotics hardware and competition platform.",
-  },
-  {
-    name: "OpenDroids",
-    detail:
-      "Additional robotic assets and kits to add diversity to workshop demos and challenges.",
   },
 ];
 
