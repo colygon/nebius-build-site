@@ -15,6 +15,8 @@ export default function RegisterPage() {
     email: "",
     company: "",
     website: "",
+    linkedin: "",
+    twitter: "",
     message: "",
   });
   const [submitting, setSubmitting] = useState(false);
@@ -34,7 +36,7 @@ export default function RegisterPage() {
       name: form.name,
       email: form.email,
       organization: form.company || null,
-      question_one: form.website || null,
+      question_one: [form.website, form.linkedin, form.twitter].filter(Boolean).join(" | ") || null,
       question_two: form.message || null,
     });
 
@@ -167,13 +169,35 @@ export default function RegisterPage() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium mb-2 text-white/70">Website / LinkedIn</label>
+                  <label className="block text-sm font-medium mb-2 text-white/70">Website</label>
                   <input
                     type="text"
                     value={form.website}
                     onChange={(e) => setForm({ ...form, website: e.target.value })}
                     className="w-full px-4 py-3 bg-transparent border border-white/20 focus:border-white transition-colors outline-none"
-                    placeholder="https://..."
+                    placeholder="https://yourcompany.com"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium mb-2 text-white/70">LinkedIn</label>
+                  <input
+                    type="text"
+                    value={form.linkedin}
+                    onChange={(e) => setForm({ ...form, linkedin: e.target.value })}
+                    className="w-full px-4 py-3 bg-transparent border border-white/20 focus:border-white transition-colors outline-none"
+                    placeholder="https://linkedin.com/in/yourname"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium mb-2 text-white/70">Twitter / X</label>
+                  <input
+                    type="text"
+                    value={form.twitter}
+                    onChange={(e) => setForm({ ...form, twitter: e.target.value })}
+                    className="w-full px-4 py-3 bg-transparent border border-white/20 focus:border-white transition-colors outline-none"
+                    placeholder="@yourhandle"
                   />
                 </div>
 
