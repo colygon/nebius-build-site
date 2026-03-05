@@ -110,7 +110,7 @@ export default function RegisterPage() {
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label className="block text-sm font-medium mb-3 text-white/70">I&apos;m interested as a... *</label>
+                  <label className="block text-sm font-medium mb-3 text-white/70">I&apos;d like to participate as a... *</label>
                   <div className="flex flex-wrap gap-2">
                     {roles.map((role) => (
                       <button
