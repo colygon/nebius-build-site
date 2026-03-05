@@ -17,6 +17,7 @@ export default function RegisterPage() {
     website: "",
     linkedin: "",
     twitter: "",
+    phone: "",
     message: "",
   });
   const [submitting, setSubmitting] = useState(false);
@@ -36,7 +37,7 @@ export default function RegisterPage() {
       name: form.name,
       email: form.email,
       organization: form.company || null,
-      question_one: [form.website, form.linkedin, form.twitter].filter(Boolean).join(" | ") || null,
+      question_one: [form.website, form.linkedin, form.twitter, form.phone && `Phone: ${form.phone}`].filter(Boolean).join(" | ") || null,
       question_two: form.message || null,
     });
 
@@ -198,6 +199,17 @@ export default function RegisterPage() {
                     onChange={(e) => setForm({ ...form, twitter: e.target.value })}
                     className="w-full px-4 py-3 bg-transparent border border-white/20 focus:border-white transition-colors outline-none"
                     placeholder="@yourhandle"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium mb-2 text-white/70">Phone Number</label>
+                  <input
+                    type="tel"
+                    value={form.phone}
+                    onChange={(e) => setForm({ ...form, phone: e.target.value })}
+                    className="w-full px-4 py-3 bg-transparent border border-white/20 focus:border-white transition-colors outline-none"
+                    placeholder="+1 (555) 123-4567"
                   />
                 </div>
 
