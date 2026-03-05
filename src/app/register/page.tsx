@@ -6,10 +6,10 @@ import Link from "next/link";
 import { ArrowLeft, ArrowRight, Check } from "lucide-react";
 import { supabase } from "@/lib/supabase";
 
-const roles = ["Partner", "Volunteer", "Judge", "Mentor", "Press"] as const;
+const roles = ["Partner", "Volunteer", "Judge", "Mentor", "Speaker", "Press"] as const;
 
 export default function RegisterPage() {
-  const [selectedRole, setSelectedRole] = useState<string>("");
+  const [selectedRoles, setSelectedRoles] = useState<string[]>([]);
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -23,12 +23,14 @@ export default function RegisterPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!selectedRole) return;
+    if (selectedRoles.length === 0) return;
     setSubmitting(true);
     setError(null);
 
+    const roleString = selectedRoles.map(r => r.toLowerCase()).join(", ");
+
     const { error: dbError } = await supabase.from("people_applications").insert({
-      role: selectedRole.toLowerCase(),
+      role: roleString,
       name: form.name,
       email: form.email,
       organization: form.company || null,
@@ -48,7 +50,7 @@ export default function RegisterPage() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           type: "register",
-          data: { ...form, role: selectedRole },
+          data: { ...form, role: roleString },
         }),
       }).catch(() => {});
     }
@@ -114,9 +116,11 @@ export default function RegisterPage() {
                       <button
                         key={role}
                         type="button"
-                        onClick={() => setSelectedRole(role)}
+                        onClick={() => setSelectedRoles(prev =>
+                          prev.includes(role) ? prev.filter(r => r !== role) : [...prev, role]
+                        )}
                         className={`px-5 py-2.5 text-sm font-semibold border transition-colors ${
-                          selectedRole === role
+                          selectedRoles.includes(role)
                             ? "bg-[#c8ff00] text-black border-[#c8ff00]"
                             : "border-white/20 text-white/60 hover:text-white hover:border-white/40"
                         }`}
@@ -193,7 +197,7 @@ export default function RegisterPage() {
 
                 <button
                   type="submit"
-                  disabled={!selectedRole || submitting}
+                  disabled={selectedRoles.length === 0 || submitting}
                   className="bg-[#c8ff00] text-black w-full py-4 text-lg font-semibold hover:bg-[#d4ff33] transition-colors flex items-center justify-center gap-3 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {submitting ? "Submitting..." : "Submit"}
