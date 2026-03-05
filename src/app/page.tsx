@@ -958,6 +958,37 @@ export default function NebiusBuildPage() {
               </div>
             </div>
 
+            {/* Robotics Challenge */}
+            <div className="border border-[#c8ff00]/20 p-6 md:p-8 bg-white/[0.02]">
+              <p className="text-sm uppercase tracking-wider text-[#c8ff00] mb-2">Challenge</p>
+              <h3 className="text-2xl md:text-3xl font-bold mb-3">Robotics</h3>
+              <p className="text-white/60 mb-6 leading-relaxed">
+                Build a system that enables a robot to perceive its environment, reason about what is happening, and take meaningful physical actions. Teams can approach the challenge using reinforcement learning, vision-language reasoning, or predictive world models to demonstrate Physical AI progress.
+              </p>
+
+              <h4 className="text-sm uppercase tracking-widest text-white/40 mb-4">Tracks</h4>
+              <div className="grid sm:grid-cols-3 gap-4">
+                <div className="border border-white/10 p-5 bg-white/[0.03]">
+                  <h5 className="font-semibold mb-2">1. Reinforcement Learning</h5>
+                  <p className="text-sm text-white/60 leading-relaxed">
+                    Train a control policy that enables a robot to perform a physical task through trial-and-error learning in simulation or on hardware.
+                  </p>
+                </div>
+                <div className="border border-white/10 p-5 bg-white/[0.03]">
+                  <h5 className="font-semibold mb-2">2. Vision-Language Agents</h5>
+                  <p className="text-sm text-white/60 leading-relaxed">
+                    Build a system where a robot interprets visual input and natural language instructions to understand tasks and generate actions.
+                  </p>
+                </div>
+                <div className="border border-white/10 p-5 bg-white/[0.03]">
+                  <h5 className="font-semibold mb-2">3. World Models</h5>
+                  <p className="text-sm text-white/60 leading-relaxed">
+                    Develop predictive models that simulate future states of the environment to guide robot planning and decision-making.
+                  </p>
+                </div>
+              </div>
+            </div>
+
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
               <div className="border border-white/10 p-5 bg-white/[0.02]">
                 <h3 className="text-xl font-semibold mb-4">Hackable advantage</h3>
