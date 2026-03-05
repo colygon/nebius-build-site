@@ -88,11 +88,6 @@ const partners = [
     description: "Framework for building composable AI chains and tool-integrated apps.",
   },
   {
-    name: "Inferact",
-    url: "https://vllm.ai/",
-    description: "High-performance model serving and open infrastructure for LLM inference.",
-  },
-  {
     name: "Tavily",
     url: "https://tavily.com",
     description: "AI-native search API for building agents with real-time web access.",
