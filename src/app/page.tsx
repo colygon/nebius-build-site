@@ -203,7 +203,7 @@ const faqs = [
   },
   {
     q: "What kind of projects can I submit?",
-    a: "Anything AI. Autonomous agents, vibe coding tools, voice AI, wearables, robots — if it's powered by AI, we want to see it on stage.",
+    a: "Projects that use Nebius infrastructure — Token Factory for model inference, Nebius Serverless for deployment, or OpenClaw for agent orchestration. On the Physical AI side, think reinforcement learning, vision-language agents, world models, or SIM2REAL pipelines using tools like Video2Robot, MJLab, and Solo CLI with real robot hardware. Autonomous agents, dev tools, wearables, and creative builds are all welcome.",
   },
   {
     q: "Can I apply to be a judge, mentor, volunteer, partner, or press?",
@@ -790,25 +790,6 @@ export default function NebiusBuildPage() {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-              <div className="border border-white/10 p-5 bg-white/[0.02]">
-                <h3 className="text-xl font-semibold mb-4">Hackable advantage</h3>
-                <ul className="text-sm text-white/70 space-y-3">
-                  <li>• Full-stack prize path from proof-of-concept to winner-ready shipping.</li>
-                  <li>• Real hardware access with mentor support, so teams can test ideas fast.</li>
-                  <li>• Open, community-centered judging with direct feedback on standout approaches.</li>
-                </ul>
-              </div>
-
-              <div className="border border-white/10 p-5 bg-white/[0.02]">
-                <h3 className="text-xl font-semibold mb-4">Robot access + talent</h3>
-                <ul className="text-sm text-white/70 space-y-2">
-                  {robotAccess.map((robot) => (
-                    <li key={robot.name}>• <span className="font-semibold text-white">{robot.name}:</span> {robot.detail}</li>
-                  ))}
-                </ul>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -891,6 +872,26 @@ export default function NebiusBuildPage() {
                     <p className="text-sm text-white/70 mt-2">{prize.detail}</p>
                   </div>
                 ))}
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+              <div className="border border-white/10 p-5 bg-white/[0.02]">
+                <h3 className="text-xl font-semibold mb-4">Hackable advantage</h3>
+                <ul className="text-sm text-white/70 space-y-3">
+                  <li>• Full-stack prize path from proof-of-concept to winner-ready shipping.</li>
+                  <li>• Real hardware access with mentor support, so teams can test ideas fast.</li>
+                  <li>• Open, community-centered judging with direct feedback on standout approaches.</li>
+                </ul>
+              </div>
+
+              <div className="border border-white/10 p-5 bg-white/[0.02]">
+                <h3 className="text-xl font-semibold mb-4">Robot access + talent</h3>
+                <ul className="text-sm text-white/70 space-y-2">
+                  {robotAccess.map((robot) => (
+                    <li key={robot.name}>• <span className="font-semibold text-white">{robot.name}:</span> {robot.detail}</li>
+                  ))}
+                </ul>
               </div>
             </div>
 
