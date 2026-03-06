@@ -126,6 +126,26 @@ const libraryLinks = [
     desc: "Calibrate, teleoperate, train VLA models, and deploy inference on real robotic hardware.",
   },
   {
+    name: "Workshop: Private Agents",
+    url: "https://www.claw.camp/workshops/private-agents",
+    desc: "Deploy agents that process sensitive data with zero retention using isolated endpoints and compliance-ready architecture.",
+  },
+  {
+    name: "Workshop: Agent Lifecycle",
+    url: "https://www.claw.camp/workshops/agent-lifecycle",
+    desc: "Capture real-world runs, curate training data, fine-tune models on Nebius, and redeploy without code changes.",
+  },
+  {
+    name: "Guide: Production Agents at Scale",
+    url: "https://nebius.com/blog/posts/launch-production-agents-at-scale",
+    desc: "The four essentials for production-grade agents: LLMs, frameworks, evaluation, and memory systems.",
+  },
+  {
+    name: "Guide: Multi-Agent Customer Support",
+    url: "https://nebius.com/blog/posts/build-multi-agent-ai-customer-support-system",
+    desc: "Build a multi-agent system with Google ADK and A2A protocol powered by Nebius AI models.",
+  },
+  {
     name: "Nebius → TokenFactory OpenRouter integration",
     url: "https://docs.tokenfactory.nebius.com/integrations/api-routers/openrouter",
     desc: "Reference for wiring OpenRouter traffic through Nebius TokenFactory for routing and quotas.",
@@ -139,6 +159,41 @@ const libraryLinks = [
     name: "OpenClaw Docs",
     url: "https://docs.openclaw.ai",
     desc: "Read the latest architecture, usage guides, and integration docs for OpenClaw.",
+  },
+  {
+    name: "Cline: Getting Started",
+    url: "https://docs.cline.bot/getting-started/installing-cline",
+    desc: "Install and set up Cline in VS Code for AI-assisted coding and agent building.",
+  },
+  {
+    name: "Hugging Face: Transformers Quickstart",
+    url: "https://huggingface.co/docs/transformers/en/quicktour",
+    desc: "Get started with pre-trained models using simple pipelines for inference and fine-tuning.",
+  },
+  {
+    name: "LangChain: Quickstart",
+    url: "https://python.langchain.com/docs/tutorials/llm_chain/",
+    desc: "Build your first AI chain with language models, tools, and composable workflows.",
+  },
+  {
+    name: "Tavily: API Quickstart",
+    url: "https://docs.tavily.com/documentation/quickstart",
+    desc: "Get an API key and run your first AI-native search query in under 5 minutes.",
+  },
+  {
+    name: "Oumi: Quickstart",
+    url: "https://www.oumi.ai/docs/en/latest/get_started/quickstart.html",
+    desc: "Train, evaluate, and run inference with pre-configured recipes on CPU or GPU.",
+  },
+  {
+    name: "Toloka: Getting Started",
+    url: "https://toloka.ai/en/docs/toloka-apps/concepts/quickstart",
+    desc: "Set up data labeling projects and configure task workflows for AI evaluation.",
+  },
+  {
+    name: "Minimax: API Quickstart",
+    url: "https://platform.minimax.io/docs/coding-plan/quickstart",
+    desc: "Integrate Minimax multimodal AI models for text, voice, and video generation.",
   },
 ];
 
@@ -760,6 +815,36 @@ export default function NebiusBuildPage() {
       <section className="py-24 px-6 border-t border-white/10">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 gap-8">
+            <div className="border border-[#c8ff00]/20 p-6 md:p-8 bg-white/[0.02]">
+              <p className="text-sm uppercase tracking-wider text-[#c8ff00] mb-2">Challenge</p>
+              <h3 className="text-2xl md:text-3xl font-bold mb-3">Sentient AI</h3>
+              <p className="text-white/60 mb-6 leading-relaxed">
+                Build an AI system that reasons, adapts, and acts autonomously across complex tasks. Deploy open-source models on Nebius serverless infrastructure, orchestrate scalable swarms of agents, and push the boundaries of what autonomous AI can do — while keeping privacy and security at the core.
+              </p>
+
+              <h4 className="text-sm uppercase tracking-widest text-white/40 mb-4">Tracks</h4>
+              <div className="grid sm:grid-cols-3 gap-4">
+                <div className="border border-white/10 p-5 bg-white/[0.03]">
+                  <h5 className="font-semibold mb-2">1. Agent Swarms</h5>
+                  <p className="text-sm text-white/60 leading-relaxed">
+                    Orchestrate multiple autonomous agents that collaborate, delegate, and scale dynamically on Nebius Serverless to solve tasks no single agent can handle alone.
+                  </p>
+                </div>
+                <div className="border border-white/10 p-5 bg-white/[0.03]">
+                  <h5 className="font-semibold mb-2">2. Open-Source Reasoning</h5>
+                  <p className="text-sm text-white/60 leading-relaxed">
+                    Fine-tune or compose open-source models via Token Factory to build systems that reason through multi-step problems, use tools, and produce structured outputs.
+                  </p>
+                </div>
+                <div className="border border-white/10 p-5 bg-white/[0.03]">
+                  <h5 className="font-semibold mb-2">3. Private & Secure AI</h5>
+                  <p className="text-sm text-white/60 leading-relaxed">
+                    Design agents that handle sensitive data responsibly — on-premise inference, encrypted pipelines, or privacy-preserving architectures that never leak user context.
+                  </p>
+                </div>
+              </div>
+            </div>
+
             <div className="border border-[#c8ff00]/20 p-6 md:p-8 bg-white/[0.02]">
               <p className="text-sm uppercase tracking-wider text-[#c8ff00] mb-2">Challenge</p>
               <h3 className="text-2xl md:text-3xl font-bold mb-3">Physical AI</h3>
