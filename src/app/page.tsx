@@ -67,12 +67,7 @@ const partners = [
     url: "https://www.nvidia.com/",
     description: "AI infrastructure and ecosystem support for high-performance model development.",
   },
-  {
-    name: "OpenClaw",
-    url: "https://docs.openclaw.ai/",
-    description: "Core platform for agent collaboration and orchestration across workshop tracks.",
-  },
-  {
+{
     name: "Hugging Face",
     url: "https://huggingface.co/",
     description: "Model and dataset ecosystem for rapid experimentation and sharing.",
@@ -1044,13 +1039,33 @@ export default function NebiusBuildPage() {
             ))}
           </div>
 
+          {/* Keynote Speaker */}
+          <h3 className="text-sm uppercase tracking-widest text-white/40 mb-6">Keynote Speaker</h3>
+          <a
+            href="https://www.linkedin.com/in/ujval-kapasi/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="border border-white/10 bg-white/[0.02] p-6 text-center group hover:border-white/20 transition-colors block max-w-xs mx-auto mb-12"
+          >
+            <Image
+              src="/people/ujval.jpeg"
+              alt="Ujval Kapasi"
+              width={80}
+              height={80}
+              className="w-20 h-20 mx-auto mb-4 rounded-full border border-white/10 object-cover"
+            />
+            <p className="font-semibold text-lg">Ujval Kapasi</p>
+            <p className="text-sm text-white/50 mt-1">Software & Algorithms @ NVIDIA</p>
+            <p className="text-xs text-[#c8ff00]/70 mt-2">Keynote</p>
+          </a>
+
           {/* Mentors & Judges */}
           <h3 className="text-sm uppercase tracking-widest text-white/40 mb-6">Mentors & Judges</h3>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mb-12">
             {[
               { name: "Aleks P", org: "Nebius — Head of AI Product", role: "Judge" },
               { name: "Vitaly", org: "Nebius", role: "Judge" },
-              { name: "Colin L.", org: "Dabl Club", role: "Judge" },
+              { name: "Colin L.", org: "Nebius", role: "Judge" },
               { name: "Pavani", org: "NVIDIA", role: "Judge" },
               { name: "Sujee Maniyam", org: "Nebius", role: "Mentor" },
               { name: "Masha Stroganova", org: "Nebius", role: "Mentor" },

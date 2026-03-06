@@ -6,7 +6,8 @@ import Link from "next/link";
 import { ArrowLeft, ArrowRight, Check } from "lucide-react";
 import { convex } from "@/lib/convex";
 
-const roles = ["Partner", "Sponsor", "Promoter", "Volunteer", "Judge", "Mentor", "Speaker", "Artist", "Press"] as const;
+const REGISTER_URL = "https://cerebralvalley.ai/e/nebius-build-sf";
+const roles = ["Hacker", "Partner", "Sponsor", "Promoter", "Volunteer", "Judge", "Mentor", "Speaker", "Artist", "Press"] as const;
 
 export default function RegisterPage() {
   const [selectedRoles, setSelectedRoles] = useState<string[]>([]);
@@ -158,9 +159,18 @@ export default function RegisterPage() {
                       <button
                         key={role}
                         type="button"
-                        onClick={() => setSelectedRoles(prev =>
-                          prev.includes(role) ? prev.filter(r => r !== role) : [...prev, role]
-                        )}
+                        onClick={() => {
+                          if (role === "Hacker") {
+                            setSelectedRoles(prev =>
+                              prev.includes("Hacker") ? prev.filter(r => r !== "Hacker") : ["Hacker"]
+                            );
+                          } else {
+                            setSelectedRoles(prev => {
+                              const without = prev.filter(r => r !== "Hacker");
+                              return without.includes(role) ? without.filter(r => r !== role) : [...without, role];
+                            });
+                          }
+                        }}
                         className={`px-5 py-2.5 text-sm font-semibold border transition-colors ${
                           selectedRoles.includes(role)
                             ? "bg-[#c8ff00] text-black border-[#c8ff00]"
@@ -173,6 +183,23 @@ export default function RegisterPage() {
                   </div>
                 </div>
 
+                {selectedRoles.includes("Hacker") ? (
+                  <div className="text-center py-8">
+                    <p className="text-white/60 mb-6">
+                      Hacker registration is handled through Cerebral Valley.
+                    </p>
+                    <a
+                      href={REGISTER_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-[#c8ff00] text-black px-8 py-4 text-lg font-semibold hover:bg-[#d4ff33] transition-colors inline-flex items-center gap-3"
+                    >
+                      Register as a Hacker
+                      <ArrowRight className="w-5 h-5" />
+                    </a>
+                  </div>
+                ) : (
+                <>
                 <div>
                   <label className="block text-sm font-medium mb-2 text-white/70">Name *</label>
                   <input
@@ -324,6 +351,8 @@ export default function RegisterPage() {
                   {submitting ? "Submitting..." : "Submit"}
                   {!submitting && <ArrowRight className="w-5 h-5" />}
                 </button>
+                </>
+                )}
               </form>
             )}
           </div>
