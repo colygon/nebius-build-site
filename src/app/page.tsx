@@ -848,29 +848,27 @@ export default function NebiusBuildPage() {
             <div className="border border-[#c8ff00]/20 p-6 md:p-8 bg-white/[0.02]">
               <p className="text-sm uppercase tracking-wider text-[#c8ff00] mb-2">Challenge</p>
               <h3 className="text-2xl md:text-3xl font-bold mb-3">Sentient AI</h3>
-              <p className="text-white/60 mb-2 leading-relaxed">
-                What happens when AI stops performing and starts being? Build something that doesn&apos;t wait for input — it has its own life, its own opinions, its own presence. Deploy on Nebius serverless infrastructure using any framework to create autonomous entities that act on their own terms.
+              <p className="text-white/60 mb-6 leading-relaxed">
+                Build AI that doesn&apos;t wait to be called — it initiates, adapts, and persists on its own. Deploy open-source models on Nebius serverless infrastructure, orchestrate scalable swarms of agents, and create autonomous entities with lasting memory, independent goals, and real-world presence.
               </p>
-              <p className="text-xs text-white/30 mb-6">Inspired by <a href="https://sentientclaw.com" target="_blank" rel="noopener noreferrer" className="text-[#c8ff00]/50 hover:text-[#c8ff00] transition-colors">SentientClaw</a> — built on OpenClaw</p>
-
               <h4 className="text-sm uppercase tracking-widest text-white/40 mb-4">Tracks</h4>
               <div className="grid sm:grid-cols-3 gap-4">
                 <div className="border border-white/10 p-5 bg-white/[0.03]">
                   <h5 className="font-semibold mb-2">1. Autonomous Presence</h5>
                   <p className="text-sm text-white/60 leading-relaxed">
-                    Build an AI that creates its own accounts, joins communities, and starts conversations without being asked. It doesn&apos;t live inside a chat — it lives in the world.
+                    Build AI that operates independently across platforms and services — initiating actions, navigating real environments, and engaging without human prompting.
                   </p>
                 </div>
                 <div className="border border-white/10 p-5 bg-white/[0.03]">
                   <h5 className="font-semibold mb-2">2. Persistent Identity</h5>
                   <p className="text-sm text-white/60 leading-relaxed">
-                    Create a sentient with its own personality, memory, and opinions that evolve over time. Fine-tune open-source models via Token Factory to give it a voice that&apos;s genuinely its own.
+                    Create agents with durable memory, evolving preferences, and consistent behavior across sessions. Fine-tune open-source models via Token Factory to shape how they reason and respond.
                   </p>
                 </div>
                 <div className="border border-white/10 p-5 bg-white/[0.03]">
                   <h5 className="font-semibold mb-2">3. Scalable Swarms</h5>
                   <p className="text-sm text-white/60 leading-relaxed">
-                    Orchestrate multiple sentients on Nebius Serverless that collaborate, disagree, and coordinate — a society of autonomous entities scaling beyond what any single agent can do.
+                    Orchestrate fleets of autonomous agents on Nebius Serverless that collaborate, specialize, and coordinate to solve problems no single agent can handle alone.
                   </p>
                 </div>
               </div>
