@@ -5,6 +5,7 @@ export default defineSchema({
   registrations: defineTable({
     roles: v.string(),
     name: v.string(),
+    title: v.optional(v.string()),
     email: v.string(),
     company: v.optional(v.string()),
     website: v.optional(v.string()),

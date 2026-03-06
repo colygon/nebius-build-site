@@ -12,6 +12,7 @@ export default function RegisterPage() {
   const [selectedRoles, setSelectedRoles] = useState<string[]>([]);
   const [form, setForm] = useState({
     name: "",
+    title: "",
     email: "",
     company: "",
     website: "",
@@ -38,6 +39,7 @@ export default function RegisterPage() {
         await convex.mutation("registrations:submit" as any, {
           roles: roleString,
           name: form.name,
+          title: form.title || undefined,
           email: form.email,
           company: form.company || undefined,
           website: form.website || undefined,
@@ -61,6 +63,7 @@ export default function RegisterPage() {
             timestamp: new Date().toISOString(),
             roles: roleString,
             name: form.name,
+            title: form.title,
             email: form.email,
             company: form.company,
             website: form.website,
@@ -173,6 +176,17 @@ export default function RegisterPage() {
                     onChange={(e) => setForm({ ...form, name: e.target.value })}
                     className="w-full px-4 py-3 bg-transparent border border-white/20 focus:border-white transition-colors outline-none"
                     placeholder="Your name"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium mb-2 text-white/70">Title</label>
+                  <input
+                    type="text"
+                    value={form.title}
+                    onChange={(e) => setForm({ ...form, title: e.target.value })}
+                    className="w-full px-4 py-3 bg-transparent border border-white/20 focus:border-white transition-colors outline-none"
+                    placeholder="Your job title"
                   />
                 </div>
 
