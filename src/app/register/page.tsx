@@ -261,11 +261,20 @@ export default function RegisterPage() {
                   <label className="block text-sm font-medium mb-2 text-white/70">
                     Tell us more about how you&apos;d like to be involved
                   </label>
+                  {selectedRoles.some(r => ["Partner", "Sponsor", "Mentor", "Judge"].includes(r)) && (
+                    <p className="text-sm text-white/40 mb-2">
+                      Please include any documentation links, presentation links, or details on prizes such as credits you plan to give away.
+                    </p>
+                  )}
                   <textarea
                     value={form.message}
                     onChange={(e) => setForm({ ...form, message: e.target.value })}
                     className="w-full px-4 py-3 bg-transparent border border-white/20 focus:border-white transition-colors outline-none h-32 resize-none"
-                    placeholder="Your goals, relevant experience, or anything else we should know."
+                    placeholder={
+                      selectedRoles.some(r => ["Partner", "Sponsor", "Mentor", "Judge"].includes(r))
+                        ? "Your goals, documentation/presentation links, prizes or credits you plan to offer, and anything else we should know."
+                        : "Your goals, relevant experience, or anything else we should know."
+                    }
                   />
                 </div>
 
