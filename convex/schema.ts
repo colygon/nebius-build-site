@@ -13,4 +13,14 @@ export default defineSchema({
     phone: v.optional(v.string()),
     message: v.optional(v.string()),
   }),
+  sponsorInquiries: defineTable({
+    firstName: v.string(),
+    lastName: v.string(),
+    email: v.string(),
+    company: v.string(),
+    previousSponsor: v.boolean(),
+    telegram: v.optional(v.string()),
+    donationAmount: v.optional(v.string()),
+    plans: v.string(),
+  }),
 });

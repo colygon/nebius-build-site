@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight, Check } from "lucide-react";
-import { supabase } from "@/lib/supabase";
+import { convex } from "@/lib/convex";
 
 export default function SponsorPage() {
   const [form, setForm] = useState({
@@ -26,24 +26,22 @@ export default function SponsorPage() {
     setSubmitting(true);
     setError(null);
 
-    const { error: dbError } = await supabase.from("sponsor_inquiries").insert({
-      first_name: form.firstName,
-      last_name: form.lastName,
-      email: form.email,
-      company: form.company,
-      previous_sponsor: form.previousSponsor === "yes",
-      telegram: form.telegram || null,
-      donation_amount: form.donationAmount || null,
-      plans: form.plans,
-    });
+    try {
+      if (convex) {
+        await convex.mutation("sponsorInquiries:submit" as any, {
+          firstName: form.firstName,
+          lastName: form.lastName,
+          email: form.email,
+          company: form.company,
+          previousSponsor: form.previousSponsor === "yes",
+          telegram: form.telegram || undefined,
+          donationAmount: form.donationAmount || undefined,
+          plans: form.plans,
+        });
+      }
 
-    setSubmitting(false);
-
-    if (dbError) {
-      setError("Something went wrong. Please try again.");
-      console.error("Supabase error:", dbError);
-    } else {
       setSubmitted(true);
+
       fetch("/api/notify", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -52,7 +50,12 @@ export default function SponsorPage() {
           data: form,
         }),
       }).catch(() => {});
+    } catch (err) {
+      setError("Something went wrong. Please try again.");
+      console.error("Submit error:", err);
     }
+
+    setSubmitting(false);
   };
 
   return (

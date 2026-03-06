@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight, Check } from "lucide-react";
-import { supabase } from "@/lib/supabase";
+import { convex } from "@/lib/convex";
 
 export default function PartnerPage() {
   const [form, setForm] = useState({
@@ -23,22 +23,20 @@ export default function PartnerPage() {
     setSubmitting(true);
     setError(null);
 
-    const { error: dbError } = await supabase.from("people_applications").insert({
-      role: "partner",
-      name: form.name,
-      email: form.email,
-      organization: form.company || null,
-      question_one: form.website || null,
-      question_two: form.plans || null,
-    });
+    try {
+      if (convex) {
+        await convex.mutation("registrations:submit" as any, {
+          roles: "partner",
+          name: form.name,
+          email: form.email,
+          company: form.company || undefined,
+          website: form.website || undefined,
+          message: form.plans || undefined,
+        });
+      }
 
-    setSubmitting(false);
-
-    if (dbError) {
-      setError("Something went wrong. Please try again.");
-      console.error("Supabase error:", dbError);
-    } else {
       setSubmitted(true);
+
       fetch("/api/notify", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -47,7 +45,12 @@ export default function PartnerPage() {
           data: form,
         }),
       }).catch(() => {});
+    } catch (err) {
+      setError("Something went wrong. Please try again.");
+      console.error("Submit error:", err);
     }
+
+    setSubmitting(false);
   };
 
   return (
