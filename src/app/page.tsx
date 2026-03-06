@@ -106,6 +106,26 @@ const partners = [
 
 const libraryLinks = [
   {
+    name: "Sign up for Nebius Cloud",
+    url: "https://console.nebius.com",
+    desc: "Create your Nebius Cloud account to access GPU compute, serverless endpoints, and more.",
+  },
+  {
+    name: "Sign up for Nebius Token Factory",
+    url: "https://tokenfactory.nebius.com",
+    desc: "Get access to Token Factory for model inference, routing, and quota management.",
+  },
+  {
+    name: "Workshop: Agent-Grade Inference",
+    url: "https://www.claw.camp/workshops/agent-inference",
+    desc: "Hands-on guide to deploying AI agents on Nebius Serverless with OpenClaw and Token Factory.",
+  },
+  {
+    name: "Workshop: Robotics with Solo CLI",
+    url: "https://www.claw.camp/workshops/robotics",
+    desc: "Calibrate, teleoperate, train VLA models, and deploy inference on real robotic hardware.",
+  },
+  {
     name: "Nebius → TokenFactory OpenRouter integration",
     url: "https://docs.tokenfactory.nebius.com/integrations/api-routers/openrouter",
     desc: "Reference for wiring OpenRouter traffic through Nebius TokenFactory for routing and quotas.",
@@ -119,16 +139,6 @@ const libraryLinks = [
     name: "OpenClaw Docs",
     url: "https://docs.openclaw.ai",
     desc: "Read the latest architecture, usage guides, and integration docs for OpenClaw.",
-  },
-  {
-    name: "Model Context Protocol (MCP)",
-    url: "https://modelcontextprotocol.io/docs",
-    desc: "Spec and implementation notes for building tool-capable LLM integrations.",
-  },
-  {
-    name: "OpenAI API",
-    url: "https://platform.openai.com/docs/api-reference",
-    desc: "Official API reference for chat/completion pipelines and authentication patterns.",
   },
 ];
 
@@ -746,6 +756,63 @@ export default function NebiusBuildPage() {
         </div>
       </section>
 
+      {/* Physical AI Challenge */}
+      <section className="py-24 px-6 border-t border-white/10">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 gap-8">
+            <div className="border border-[#c8ff00]/20 p-6 md:p-8 bg-white/[0.02]">
+              <p className="text-sm uppercase tracking-wider text-[#c8ff00] mb-2">Challenge</p>
+              <h3 className="text-2xl md:text-3xl font-bold mb-3">Physical AI</h3>
+              <p className="text-white/60 mb-6 leading-relaxed">
+                Build a system that enables a robot to perceive its environment, reason about what is happening, and take meaningful physical actions. Teams can approach the challenge using reinforcement learning, vision-language reasoning, or predictive world models to demonstrate Physical AI progress.
+              </p>
+
+              <h4 className="text-sm uppercase tracking-widest text-white/40 mb-4">Tracks</h4>
+              <div className="grid sm:grid-cols-3 gap-4">
+                <div className="border border-white/10 p-5 bg-white/[0.03]">
+                  <h5 className="font-semibold mb-2">1. Reinforcement Learning</h5>
+                  <p className="text-sm text-white/60 leading-relaxed">
+                    Train a control policy that enables a robot to perform a physical task through trial-and-error learning in simulation or on hardware.
+                  </p>
+                </div>
+                <div className="border border-white/10 p-5 bg-white/[0.03]">
+                  <h5 className="font-semibold mb-2">2. Vision-Language Agents</h5>
+                  <p className="text-sm text-white/60 leading-relaxed">
+                    Build a system where a robot interprets visual input and natural language instructions to understand tasks and generate actions.
+                  </p>
+                </div>
+                <div className="border border-white/10 p-5 bg-white/[0.03]">
+                  <h5 className="font-semibold mb-2">3. World Models</h5>
+                  <p className="text-sm text-white/60 leading-relaxed">
+                    Develop predictive models that simulate future states of the environment to guide robot planning and decision-making.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+              <div className="border border-white/10 p-5 bg-white/[0.02]">
+                <h3 className="text-xl font-semibold mb-4">Hackable advantage</h3>
+                <ul className="text-sm text-white/70 space-y-3">
+                  <li>• Full-stack prize path from proof-of-concept to winner-ready shipping.</li>
+                  <li>• Real hardware access with mentor support, so teams can test ideas fast.</li>
+                  <li>• Open, community-centered judging with direct feedback on standout approaches.</li>
+                </ul>
+              </div>
+
+              <div className="border border-white/10 p-5 bg-white/[0.02]">
+                <h3 className="text-xl font-semibold mb-4">Robot access + talent</h3>
+                <ul className="text-sm text-white/70 space-y-2">
+                  {robotAccess.map((robot) => (
+                    <li key={robot.name}>• <span className="font-semibold text-white">{robot.name}:</span> {robot.detail}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       </div>
 
       <div className={activeTab === "venue" ? "" : "hidden"}>
@@ -827,56 +894,6 @@ export default function NebiusBuildPage() {
               </div>
             </div>
 
-            {/* Robotics Challenge */}
-            <div className="border border-[#c8ff00]/20 p-6 md:p-8 bg-white/[0.02]">
-              <p className="text-sm uppercase tracking-wider text-[#c8ff00] mb-2">Challenge</p>
-              <h3 className="text-2xl md:text-3xl font-bold mb-3">Robotics</h3>
-              <p className="text-white/60 mb-6 leading-relaxed">
-                Build a system that enables a robot to perceive its environment, reason about what is happening, and take meaningful physical actions. Teams can approach the challenge using reinforcement learning, vision-language reasoning, or predictive world models to demonstrate Physical AI progress.
-              </p>
-
-              <h4 className="text-sm uppercase tracking-widest text-white/40 mb-4">Tracks</h4>
-              <div className="grid sm:grid-cols-3 gap-4">
-                <div className="border border-white/10 p-5 bg-white/[0.03]">
-                  <h5 className="font-semibold mb-2">1. Reinforcement Learning</h5>
-                  <p className="text-sm text-white/60 leading-relaxed">
-                    Train a control policy that enables a robot to perform a physical task through trial-and-error learning in simulation or on hardware.
-                  </p>
-                </div>
-                <div className="border border-white/10 p-5 bg-white/[0.03]">
-                  <h5 className="font-semibold mb-2">2. Vision-Language Agents</h5>
-                  <p className="text-sm text-white/60 leading-relaxed">
-                    Build a system where a robot interprets visual input and natural language instructions to understand tasks and generate actions.
-                  </p>
-                </div>
-                <div className="border border-white/10 p-5 bg-white/[0.03]">
-                  <h5 className="font-semibold mb-2">3. World Models</h5>
-                  <p className="text-sm text-white/60 leading-relaxed">
-                    Develop predictive models that simulate future states of the environment to guide robot planning and decision-making.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-              <div className="border border-white/10 p-5 bg-white/[0.02]">
-                <h3 className="text-xl font-semibold mb-4">Hackable advantage</h3>
-                <ul className="text-sm text-white/70 space-y-3">
-                  <li>• Full-stack prize path from proof-of-concept to winner-ready shipping.</li>
-                  <li>• Real hardware access with mentor support, so teams can test ideas fast.</li>
-                  <li>• Open, community-centered judging with direct feedback on standout approaches.</li>
-                </ul>
-              </div>
-
-              <div className="border border-white/10 p-5 bg-white/[0.02]">
-                <h3 className="text-xl font-semibold mb-4">Robot access + talent</h3>
-                <ul className="text-sm text-white/70 space-y-2">
-                  {robotAccess.map((robot) => (
-                    <li key={robot.name}>• <span className="font-semibold text-white">{robot.name}:</span> {robot.detail}</li>
-                  ))}
-                </ul>
-              </div>
-            </div>
           </div>
 
         </div>
