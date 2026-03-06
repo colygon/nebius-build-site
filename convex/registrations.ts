@@ -12,6 +12,8 @@ export const submit = mutation({
     linkedin: v.optional(v.string()),
     twitter: v.optional(v.string()),
     phone: v.optional(v.string()),
+    presentationTitle: v.optional(v.string()),
+    speakerLinks: v.optional(v.string()),
     message: v.optional(v.string()),
   },
   handler: async (ctx, args) => {

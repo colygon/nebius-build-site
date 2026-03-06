@@ -19,6 +19,8 @@ export default function RegisterPage() {
     linkedin: "",
     twitter: "",
     phone: "",
+    presentationTitle: "",
+    speakerLinks: "",
     message: "",
   });
   const [submitting, setSubmitting] = useState(false);
@@ -46,6 +48,8 @@ export default function RegisterPage() {
           linkedin: form.linkedin || undefined,
           twitter: form.twitter || undefined,
           phone: form.phone || undefined,
+          presentationTitle: form.presentationTitle || undefined,
+          speakerLinks: form.speakerLinks || undefined,
           message: form.message || undefined,
         });
       }
@@ -70,6 +74,8 @@ export default function RegisterPage() {
             linkedin: form.linkedin,
             twitter: form.twitter,
             phone: form.phone,
+            presentationTitle: form.presentationTitle,
+            speakerLinks: form.speakerLinks,
             message: form.message,
           }),
         }).catch(() => {});
@@ -256,6 +262,32 @@ export default function RegisterPage() {
                     placeholder="+1 (555) 123-4567"
                   />
                 </div>
+
+                {selectedRoles.includes("Speaker") && (
+                  <div>
+                    <label className="block text-sm font-medium mb-2 text-white/70">Presentation Title</label>
+                    <input
+                      type="text"
+                      value={form.presentationTitle || ""}
+                      onChange={(e) => setForm({ ...form, presentationTitle: e.target.value })}
+                      className="w-full px-4 py-3 bg-transparent border border-white/20 focus:border-white transition-colors outline-none"
+                      placeholder="Title of your talk or presentation"
+                    />
+                  </div>
+                )}
+
+                {selectedRoles.includes("Speaker") && (
+                  <div>
+                    <label className="block text-sm font-medium mb-2 text-white/70">Slides / Video Links</label>
+                    <input
+                      type="text"
+                      value={form.speakerLinks || ""}
+                      onChange={(e) => setForm({ ...form, speakerLinks: e.target.value })}
+                      className="w-full px-4 py-3 bg-transparent border border-white/20 focus:border-white transition-colors outline-none"
+                      placeholder="Links to slides, videos, or past talks"
+                    />
+                  </div>
+                )}
 
                 <div>
                   <label className="block text-sm font-medium mb-2 text-white/70">
