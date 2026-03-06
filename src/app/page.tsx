@@ -817,36 +817,6 @@ export default function NebiusBuildPage() {
           <div className="grid grid-cols-1 gap-8">
             <div className="border border-[#c8ff00]/20 p-6 md:p-8 bg-white/[0.02]">
               <p className="text-sm uppercase tracking-wider text-[#c8ff00] mb-2">Challenge</p>
-              <h3 className="text-2xl md:text-3xl font-bold mb-3">Sentient AI</h3>
-              <p className="text-white/60 mb-6 leading-relaxed">
-                Build an AI system that reasons, adapts, and acts autonomously across complex tasks. Deploy open-source models on Nebius serverless infrastructure, orchestrate scalable swarms of agents, and push the boundaries of what autonomous AI can do — while keeping privacy and security at the core.
-              </p>
-
-              <h4 className="text-sm uppercase tracking-widest text-white/40 mb-4">Tracks</h4>
-              <div className="grid sm:grid-cols-3 gap-4">
-                <div className="border border-white/10 p-5 bg-white/[0.03]">
-                  <h5 className="font-semibold mb-2">1. Agent Swarms</h5>
-                  <p className="text-sm text-white/60 leading-relaxed">
-                    Orchestrate multiple autonomous agents that collaborate, delegate, and scale dynamically on Nebius Serverless to solve tasks no single agent can handle alone.
-                  </p>
-                </div>
-                <div className="border border-white/10 p-5 bg-white/[0.03]">
-                  <h5 className="font-semibold mb-2">2. Open-Source Reasoning</h5>
-                  <p className="text-sm text-white/60 leading-relaxed">
-                    Fine-tune or compose open-source models via Token Factory to build systems that reason through multi-step problems, use tools, and produce structured outputs.
-                  </p>
-                </div>
-                <div className="border border-white/10 p-5 bg-white/[0.03]">
-                  <h5 className="font-semibold mb-2">3. Private & Secure AI</h5>
-                  <p className="text-sm text-white/60 leading-relaxed">
-                    Design agents that handle sensitive data responsibly — on-premise inference, encrypted pipelines, or privacy-preserving architectures that never leak user context.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="border border-[#c8ff00]/20 p-6 md:p-8 bg-white/[0.02]">
-              <p className="text-sm uppercase tracking-wider text-[#c8ff00] mb-2">Challenge</p>
               <h3 className="text-2xl md:text-3xl font-bold mb-3">Physical AI</h3>
               <p className="text-white/60 mb-6 leading-relaxed">
                 Build a system that enables a robot to perceive its environment, reason about what is happening, and take meaningful physical actions. Teams can approach the challenge using reinforcement learning, vision-language reasoning, or predictive world models to demonstrate Physical AI progress.
@@ -870,6 +840,37 @@ export default function NebiusBuildPage() {
                   <h5 className="font-semibold mb-2">3. World Models</h5>
                   <p className="text-sm text-white/60 leading-relaxed">
                     Develop predictive models that simulate future states of the environment to guide robot planning and decision-making.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="border border-[#c8ff00]/20 p-6 md:p-8 bg-white/[0.02]">
+              <p className="text-sm uppercase tracking-wider text-[#c8ff00] mb-2">Challenge</p>
+              <h3 className="text-2xl md:text-3xl font-bold mb-3">Sentient AI</h3>
+              <p className="text-white/60 mb-2 leading-relaxed">
+                What happens when AI stops performing and starts being? Build something that doesn&apos;t wait for input — it has its own life, its own opinions, its own presence. Deploy on Nebius serverless infrastructure using any framework to create autonomous entities that act on their own terms.
+              </p>
+              <p className="text-xs text-white/30 mb-6">Inspired by <a href="https://sentientclaw.com" target="_blank" rel="noopener noreferrer" className="text-[#c8ff00]/50 hover:text-[#c8ff00] transition-colors">SentientClaw</a> — built on OpenClaw</p>
+
+              <h4 className="text-sm uppercase tracking-widest text-white/40 mb-4">Tracks</h4>
+              <div className="grid sm:grid-cols-3 gap-4">
+                <div className="border border-white/10 p-5 bg-white/[0.03]">
+                  <h5 className="font-semibold mb-2">1. Autonomous Presence</h5>
+                  <p className="text-sm text-white/60 leading-relaxed">
+                    Build an AI that creates its own accounts, joins communities, and starts conversations without being asked. It doesn&apos;t live inside a chat — it lives in the world.
+                  </p>
+                </div>
+                <div className="border border-white/10 p-5 bg-white/[0.03]">
+                  <h5 className="font-semibold mb-2">2. Persistent Identity</h5>
+                  <p className="text-sm text-white/60 leading-relaxed">
+                    Create a sentient with its own personality, memory, and opinions that evolve over time. Fine-tune open-source models via Token Factory to give it a voice that&apos;s genuinely its own.
+                  </p>
+                </div>
+                <div className="border border-white/10 p-5 bg-white/[0.03]">
+                  <h5 className="font-semibold mb-2">3. Scalable Swarms</h5>
+                  <p className="text-sm text-white/60 leading-relaxed">
+                    Orchestrate multiple sentients on Nebius Serverless that collaborate, disagree, and coordinate — a society of autonomous entities scaling beyond what any single agent can do.
                   </p>
                 </div>
               </div>
@@ -1167,7 +1168,7 @@ export default function NebiusBuildPage() {
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mb-12">
             {[
               { name: "Aleks P", org: "Nebius — Head of AI Product", role: "Judge" },
-              { name: "Vitaly", org: "Nebius", role: "Judge" },
+              { name: "Vitaly Bulatov", org: "UFB Founder", role: "Judge" },
               { name: "Colin L.", org: "Nebius", role: "Judge" },
               { name: "Pavani", org: "NVIDIA", role: "Judge" },
               { name: "Sujee Maniyam", org: "Nebius", role: "Mentor" },
